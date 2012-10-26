@@ -1,0 +1,33 @@
+﻿@model ModelBase
+@{
+	var homeLink = new ActionLinkModel<HomeController>(x => x.Index(), "Kinstner Photo Gallery");
+}
+<html>
+<head>
+	<title>@Model.HtmlPageTitle</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--[if lte IE 9]>
+		<link rel="stylesheet" href="@Url.Content("~/Content/styles/ie.css")" type="text/css" media="screen" />
+	<![endif]-->
+	<link rel="stylesheet" href="@Url.Content("~/Content/styles/1140.css")" type="text/css" media="screen" />
+	<link rel="stylesheet" href="@Url.Content("~/Content/styles/gallery.css")" type="text/css" media="screen" />
+	<script type="text/javascript" src="@Url.Content("~/Scripts/css3-mediaqueries.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.8.2.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Scripts/gallery.js")"></script>
+</head>
+	<body>
+		<div class="container topMenu">
+			<div class="row">
+				<div class="sixcol title">
+					@Html.ActionLink(homeLink)
+				</div>
+				<div class="sixcol last items">
+					<a href="#">menu</a> |
+					<a href="#">items</a> |
+					<a href="#">here</a>
+				</div>
+			</div>
+		</div>
+		@RenderBody()
+	</body>
+</html>

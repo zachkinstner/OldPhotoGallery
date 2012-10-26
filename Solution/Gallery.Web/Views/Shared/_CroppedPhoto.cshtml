@@ -1,0 +1,10 @@
+﻿@model WebPhotoCore
+@{
+	var alt = Model.ImgName+"\n"+Model.ExifDtOrig;
+	var link = new ActionLinkModel<PhotoController>(x => x.Index(Model.PhotoId), alt);
+}
+<div class="thumbCrop">
+	<a class="thumbLink" href="@Html.ActionLinkUrl(link)" title="@alt">
+		<img src="@Model.ImageUrl" class="thumb" alt="@alt" />
+	</a>
+</div>

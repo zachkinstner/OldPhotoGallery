@@ -1,0 +1,616 @@
+- **** Application_Start()
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | New FabricClient
+- No mapped documents found in assembly: Gallery.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+- Fabric | Info  |                                  | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- **** Application_Error(): System.Web.HttpCompileException (0x80004005): z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Views\Shared\_Layout.cshtml(49): error CS1061: 'Gallery.Web.Models.GalMaster' does not contain a definition for 'FabricVersion' and no extension method 'FabricVersion' accepting a first argument of type 'Gallery.Web.Models.GalMaster' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   at System.Web.WebPages.VirtualPathFactoryManager.CreateInstance[T](String virtualPath)
+   at System.Web.WebPages.WebPageExecutingBase.<>c__DisplayClass1.<GetObjectFactory>b__0()
+   at System.Web.WebPages.Util.EnsureValidPageType(WebPageBase page, String virtualPath)
+   at System.Web.WebPages.WebPageBase.PopContext()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<>c__DisplayClass1e.<InvokeActionResultWithFilters>b__1b()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- Fabric | Info  |                                  | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- **** Application_Error(): System.Web.HttpParseException (0x80004005): "/" is not valid at the start of a code block.  Only identifiers, keywords, comments, "(" and "{" are valid.
+
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.FileExists(String virtualPath)
+   at System.Web.Mvc.BuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String cacheKey, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.FindPartialView(ControllerContext controllerContext, String partialViewName, Boolean useCache)
+   at System.Web.Mvc.ViewEngineCollection.<>c__DisplayClass8.<FindPartialView>b__7(IViewEngine e)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 lookup, Boolean trackSearchedPaths)
+   at System.Web.Mvc.ViewEngineCollection.FindPartialView(ControllerContext controllerContext, String partialViewName)
+   at System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   at System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   at ASP._Page_Views_Shared__Layout_cshtml.Execute() in z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Views\Shared\_Layout.cshtml:line 38
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.WebPages.WebPageBase.<>c__DisplayClass7.<RenderPageCore>b__6(TextWriter writer)
+   at System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   at System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   at System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   at System.Web.WebPages.WebPageBase.PopContext()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<>c__DisplayClass1e.<InvokeActionResultWithFilters>b__1b()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- Fabric | Info  |                                  | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- Fabric | Info  |                                  | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- SELECT this_.PhotoId as PhotoId1_0_, this_.ImgName as ImgName1_0_, this_.Favorite as Favorite1_0_, this_.ExifDTOrig as ExifDTOrig1_0_, this_.ExifExposureTime as ExifExpo5_1_0_, this_.ExifISOSpeed as ExifISOS6_1_0_, this_.ExifFNumber as ExifFNum7_1_0_, this_.ExifFocalLength as ExifFoca8_1_0_, this_.FabricArtifactId as FabricAr9_1_0_, this_.FabricTalkId as FabricT10_1_0_, this_.AlbumId as AlbumId1_0_ FROM gallery.Photo this_ WHERE this_.Favorite > @p0 ORDER BY this_.ExifDTOrig desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as TagId4_0_, this_.Name as Name4_0_ FROM gallery.Tag this_
+- SELECT * FROM gallery.Photo INNER JOIN gallery.PhotoTag AS Pt0 ON Pt0.PhotoId=Photo.PhotoId WHERE Favorite >= 0 AND Pt0.TagId=1 ORDER BY ExifDTOrig DESC
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | Request initiated...
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  | 060e9f7056cf49e5a1ec2f6654c3d616 | New PersonSess: 060e9f7056cf49e5a1ec2f6654c3d616
+- Fabric | Info  | 060e9f7056cf49e5a1ec2f6654c3d616 | Request initiated...
+- Fabric | Debug | 060e9f7056cf49e5a1ec2f6654c3d616 | Request Error: {"error":"invalid_grant","error_description":"The redirect_uri does not match this code"} (IsOauthError=True)
+- Fabric | Error | 060e9f7056cf49e5a1ec2f6654c3d616 | Request OAuth Exception: invalid_grant / The redirect_uri does not match this code
+- Fabric | Info  | 060e9f7056cf49e5a1ec2f6654c3d616 | FabricErrorException: Fabric.Clients.CSharp.Fluent.FabricErrorException: invalid_grant
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 52
+   at Fabric.Clients.CSharp.Fluent.OauthAccess_tokenClient_credentials.Get(String redirect_uri, String client_secret, String client_id) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 2681
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.GetClientAccess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 45
+   at Fabric.Clients.CSharp.Fluent.Session.OauthSession.GetAccessToken(Func`1 pAccessFunc) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\OauthSession.cs:line 50
+- Fabric | Debug | 060e9f7056cf49e5a1ec2f6654c3d616 | Request Error: {"StatusCode":401,"Name":"FabAuthorizationFault","Description":"This function or action requires App authentication."} (IsOauthError=False)
+- Fabric | Error | 060e9f7056cf49e5a1ec2f6654c3d616 | Request Exception: FabAuthorizationFault / 401 / This function or action requires App authentication.
+- **** Application_Error(): Fabric.Clients.CSharp.Fluent.FabricErrorException: FabAuthorizationFault
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 46
+   at Fabric.Clients.CSharp.Fluent.CoreVersion.Get() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 484
+   at Gallery.Web.Controllers.HomeController.UpdateFabricVersion() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Controllers\HomeController.cs:line 128
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- Fabric | Info  | 060e9f7056cf49e5a1ec2f6654c3d616 | New FabricClient
+- Fabric | Info  | 060e9f7056cf49e5a1ec2f6654c3d616 | Request initiated...
+- Fabric | Info  | 060e9f7056cf49e5a1ec2f6654c3d616 | Request initiated...
+- Fabric | Debug | 060e9f7056cf49e5a1ec2f6654c3d616 | Request Error: {"error":"invalid_grant","error_description":"The redirect_uri does not match this code"} (IsOauthError=True)
+- Fabric | Error | 060e9f7056cf49e5a1ec2f6654c3d616 | Request OAuth Exception: invalid_grant / The redirect_uri does not match this code
+- Fabric | Info  | 060e9f7056cf49e5a1ec2f6654c3d616 | FabricErrorException: Fabric.Clients.CSharp.Fluent.FabricErrorException: invalid_grant
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 52
+   at Fabric.Clients.CSharp.Fluent.OauthAccess_tokenClient_credentials.Get(String redirect_uri, String client_secret, String client_id) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 2681
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.GetClientAccess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 45
+   at Fabric.Clients.CSharp.Fluent.Session.OauthSession.GetAccessToken(Func`1 pAccessFunc) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\OauthSession.cs:line 50
+- Fabric | Debug | 060e9f7056cf49e5a1ec2f6654c3d616 | Request Error: {"StatusCode":401,"Name":"FabAuthorizationFault","Description":"This function or action requires App authentication."} (IsOauthError=False)
+- Fabric | Error | 060e9f7056cf49e5a1ec2f6654c3d616 | Request Exception: FabAuthorizationFault / 401 / This function or action requires App authentication.
+- **** Application_Error(): Fabric.Clients.CSharp.Fluent.FabricErrorException: FabAuthorizationFault
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 46
+   at Fabric.Clients.CSharp.Fluent.CoreVersion.Get() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 484
+   at Gallery.Web.Controllers.HomeController.UpdateFabricVersion() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Controllers\HomeController.cs:line 128
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- Fabric | Info  | 060e9f7056cf49e5a1ec2f6654c3d616 | New FabricClient
+- **** Application_Error(): System.InvalidOperationException: The model item passed into the dictionary is of type 'Fabric.Clients.CSharp.Fluent.FabricClient', but this dictionary requires a model item of type 'Gallery.Web.Models.GalMaster'.
+   at System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   at System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   at System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.WebViewPage.ConfigurePage(WebPageBase parentPage)
+   at System.Web.WebPages.WebPageBase.<>c__DisplayClass7.<RenderPageCore>b__6(TextWriter writer)
+   at System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   at System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   at System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   at System.Web.WebPages.WebPageBase.PopContext()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<>c__DisplayClass1e.<InvokeActionResultWithFilters>b__1b()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- **** Application_Start()
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | New FabricClient
+- No mapped documents found in assembly: Gallery.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+- Fabric | Info  |                                  | New FabricClient
+- **** Application_Error(): System.InvalidOperationException: The view 'Index' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Oauth/Index.aspx
+~/Views/Oauth/Index.ascx
+~/Views/Shared/Index.aspx
+~/Views/Shared/Index.ascx
+~/Views/Oauth/Index.cshtml
+~/Views/Oauth/Index.vbhtml
+~/Views/Shared/Index.cshtml
+~/Views/Shared/Index.vbhtml
+   at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<>c__DisplayClass1e.<InvokeActionResultWithFilters>b__1b()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- **** Application_Start()
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | New FabricClient
+- No mapped documents found in assembly: Gallery.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+- **** Application_Error(): System.Web.HttpException (0x80004005): The controller for path '/gallery/Oauth' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<BeginProcessRequest>b__2()
+   at System.Web.Mvc.SecurityUtil.<>c__DisplayClassb`1.<ProcessInApplicationTrust>b__a()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust[TResult](Func`1 func)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- Fabric | Info  |                                  | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- Fabric | Info  |                                  | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- Fabric | Info  |                                  | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | Request initiated...
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  | 9056ba34427c4a438d7e10cbdacd7bdc | New PersonSess: 9056ba34427c4a438d7e10cbdacd7bdc
+- Fabric | Info  | 9056ba34427c4a438d7e10cbdacd7bdc | Request initiated...
+- Fabric | Debug | 9056ba34427c4a438d7e10cbdacd7bdc | Request Error: {"error":"invalid_grant","error_description":"The redirect_uri does not match this code"} (IsOauthError=True)
+- Fabric | Error | 9056ba34427c4a438d7e10cbdacd7bdc | Request OAuth Exception: invalid_grant / The redirect_uri does not match this code
+- Fabric | Info  | 9056ba34427c4a438d7e10cbdacd7bdc | FabricErrorException: Fabric.Clients.CSharp.Fluent.FabricErrorException: invalid_grant
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 52
+   at Fabric.Clients.CSharp.Fluent.OauthAccess_tokenClient_credentials.Get(String redirect_uri, String client_secret, String client_id) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 2677
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.GetClientAccess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 0
+   at Fabric.Clients.CSharp.Fluent.Session.OauthSession.GetAccessToken(Func`1 pAccessFunc) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\OauthSession.cs:line 50
+- Fabric | Debug | 9056ba34427c4a438d7e10cbdacd7bdc | Request Error: {"StatusCode":401,"Name":"FabAuthorizationFault","Description":"This function or action requires App authentication."} (IsOauthError=False)
+- Fabric | Error | 9056ba34427c4a438d7e10cbdacd7bdc | Request Exception: FabAuthorizationFault / 401 / This function or action requires App authentication.
+- **** Application_Error(): Fabric.Clients.CSharp.Fluent.FabricErrorException: FabAuthorizationFault
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 46
+   at Fabric.Clients.CSharp.Fluent.CoreVersion.Get() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 480
+   at Gallery.Web.Controllers.HomeController.UpdateFabricVersion() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Controllers\HomeController.cs:line 128
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- **** Application_Start()
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | Request initiated...
+- **** Application_Error(): System.NullReferenceException: Object reference not set to an instance of an object.
+   at Fabric.Clients.CSharp.Fluent.Session.ClientContext.get_PersonSess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\ClientContext.cs:line 30
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.GetHttpWebResponse(ClientContext pContext, String pFullPath) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 104
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.GetFabricResponse(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 68
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 41
+   at Fabric.Clients.CSharp.Fluent.OauthAccess_tokenClient_credentials.Get(String redirect_uri, String client_secret, String client_id) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 2677
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.GetClientAccess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 0
+   at Fabric.Clients.CSharp.Fluent.Session.OauthSession.GetAccessToken(Func`1 pAccessFunc) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\OauthSession.cs:line 50
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.RequestAuthentication() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 21
+   at Gallery.Web.GalleryMvcApplication.FabricClientInit() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Global.asax.cs:line 100
+   at Gallery.Web.GalleryMvcApplication.Application_Start() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Global.asax.cs:line 125 // 
+- **** Application_Start()
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | New FabricClient
+- No mapped documents found in assembly: Gallery.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | Request initiated...
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  | deff4b0dee6e41a1a3798a40614de042 | New PersonSess: deff4b0dee6e41a1a3798a40614de042
+- Fabric | Info  | deff4b0dee6e41a1a3798a40614de042 | Request initiated...
+- Fabric | Debug | deff4b0dee6e41a1a3798a40614de042 | Request Error: {"error":"invalid_grant","error_description":"The redirect_uri does not match this code"} (IsOauthError=True)
+- Fabric | Error | deff4b0dee6e41a1a3798a40614de042 | Request OAuth Exception: invalid_grant / The redirect_uri does not match this code
+- Fabric | Info  | deff4b0dee6e41a1a3798a40614de042 | FabricErrorException: Fabric.Clients.CSharp.Fluent.FabricErrorException: invalid_grant
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 52
+   at Fabric.Clients.CSharp.Fluent.OauthAccess_tokenClient_credentials.Get(String redirect_uri, String client_secret, String client_id) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 2677
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.GetClientAccess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 0
+   at Fabric.Clients.CSharp.Fluent.Session.OauthSession.GetAccessToken(Func`1 pAccessFunc) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\OauthSession.cs:line 50
+- Fabric | Debug | deff4b0dee6e41a1a3798a40614de042 | Request Error: {"StatusCode":401,"Name":"FabAuthorizationFault","Description":"This function or action requires App authentication."} (IsOauthError=False)
+- Fabric | Error | deff4b0dee6e41a1a3798a40614de042 | Request Exception: FabAuthorizationFault / 401 / This function or action requires App authentication.
+- **** Application_Error(): Fabric.Clients.CSharp.Fluent.FabricErrorException: FabAuthorizationFault
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 46
+   at Fabric.Clients.CSharp.Fluent.CoreVersion.Get() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 480
+   at Gallery.Web.Controllers.HomeController.UpdateFabricVersion() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Controllers\HomeController.cs:line 128
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- **** Application_Start()
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | New FabricClient
+- No mapped documents found in assembly: Gallery.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+- Fabric | Info  |                                  | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | Request initiated...
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  | 0c6833a92c914ad18195608d595d314a | New PersonSess: 0c6833a92c914ad18195608d595d314a
+- Fabric | Info  | 0c6833a92c914ad18195608d595d314a | Request initiated...
+- **** Application_Error(): System.Exception: No Fabric response from GET http://localhost:53109/oauth/access_token/client_credentials?redirect_uri=http%3a%2f%2flocalhost%3a49316%2fgallery%2fHome%2fOAuthRedirect&client_secret=0123456789abcdefghijkLMNOPqrstuv&client_id=3
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.GetFabricResponse(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 80
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 41
+   at Fabric.Clients.CSharp.Fluent.OauthAccess_tokenClient_credentials.Get(String redirect_uri, String client_secret, String client_id) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 2681
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.GetClientAccess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 45
+   at Fabric.Clients.CSharp.Fluent.Session.OauthSession.GetAccessToken(Func`1 pAccessFunc) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\OauthSession.cs:line 50
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.RefreshTokenIfNecessary() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 30
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.GetHttpWebResponse(ClientContext pContext, String pFullPath) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 110
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.GetFabricResponse(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 68
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 41
+   at Fabric.Clients.CSharp.Fluent.CoreVersion.Get() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 484
+   at Gallery.Web.Controllers.HomeController.UpdateFabricVersion() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Controllers\HomeController.cs:line 128
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- **** Application_Start()
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | New FabricClient
+- No mapped documents found in assembly: Gallery.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | Request initiated...
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  | 4eb443d4fa3f474a9aa12c67fcbd199d | New PersonSess: 4eb443d4fa3f474a9aa12c67fcbd199d
+- Fabric | Info  | 4eb443d4fa3f474a9aa12c67fcbd199d | Request initiated...
+- Fabric | Debug | 4eb443d4fa3f474a9aa12c67fcbd199d | Request Error: {"error":"invalid_grant","error_description":"The redirect_uri does not match this code"} (IsOauthError=True)
+- Fabric | Error | 4eb443d4fa3f474a9aa12c67fcbd199d | Request OAuth Exception: invalid_grant / The redirect_uri does not match this code
+- Fabric | Info  | 4eb443d4fa3f474a9aa12c67fcbd199d | FabricErrorException: Fabric.Clients.CSharp.Fluent.FabricErrorException: invalid_grant
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 52
+   at Fabric.Clients.CSharp.Fluent.OauthAccess_tokenClient_credentials.Get(String redirect_uri, String client_secret, String client_id) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 2677
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.GetClientAccess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 0
+   at Fabric.Clients.CSharp.Fluent.Session.OauthSession.GetAccessToken(Func`1 pAccessFunc) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\OauthSession.cs:line 50
+- Fabric | Debug | 4eb443d4fa3f474a9aa12c67fcbd199d | Request Error: {"StatusCode":401,"Name":"FabAuthorizationFault","Description":"This function or action requires App authentication."} (IsOauthError=False)
+- Fabric | Error | 4eb443d4fa3f474a9aa12c67fcbd199d | Request Exception: FabAuthorizationFault / 401 / This function or action requires App authentication.
+- **** Application_Error(): Fabric.Clients.CSharp.Fluent.FabricErrorException: FabAuthorizationFault
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 46
+   at Fabric.Clients.CSharp.Fluent.CoreVersion.Get() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 480
+   at Gallery.Web.Controllers.HomeController.UpdateFabricVersion() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Controllers\HomeController.cs:line 128
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- **** Application_Start()
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | New FabricClient
+- No mapped documents found in assembly: Gallery.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+- Fabric | Info  |                                  | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  |                                  | Request initiated...
+- Fabric | Info  |                                  | New FabricClient
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New PersonSess: eca3e0da5872441ebdb95822ddc48f55
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request initiated...
+- Fabric | Debug | eca3e0da5872441ebdb95822ddc48f55 | Request Error: {"error":"invalid_request","error_description":"An unexpected error occurred"} (IsOauthError=True)
+- Fabric | Error | eca3e0da5872441ebdb95822ddc48f55 | Request OAuth Exception: invalid_request / An unexpected error occurred
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | FabricErrorException: Fabric.Clients.CSharp.Fluent.FabricErrorException: invalid_request
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 52
+   at Fabric.Clients.CSharp.Fluent.OauthAccess_tokenClient_credentials.Get(String redirect_uri, String client_secret, String client_id) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 2681
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.GetClientAccess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 45
+   at Fabric.Clients.CSharp.Fluent.Session.OauthSession.GetAccessToken(Func`1 pAccessFunc) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\OauthSession.cs:line 50
+- Fabric | Debug | eca3e0da5872441ebdb95822ddc48f55 | Request Error: {"StatusCode":401,"Name":"FabAuthorizationFault","Description":"This function or action requires App authentication."} (IsOauthError=False)
+- Fabric | Error | eca3e0da5872441ebdb95822ddc48f55 | Request Exception: FabAuthorizationFault / 401 / This function or action requires App authentication.
+- **** Application_Error(): Fabric.Clients.CSharp.Fluent.FabricErrorException: FabAuthorizationFault
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 46
+   at Fabric.Clients.CSharp.Fluent.CoreVersion.Get() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 484
+   at Gallery.Web.Controllers.HomeController.UpdateFabricVersion() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Controllers\HomeController.cs:line 128
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New FabricClient
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request initiated...
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request initiated...
+- Fabric | Debug | eca3e0da5872441ebdb95822ddc48f55 | Request Error: {"error":"invalid_request","error_description":"An unexpected error occurred"} (IsOauthError=True)
+- Fabric | Error | eca3e0da5872441ebdb95822ddc48f55 | Request OAuth Exception: invalid_request / An unexpected error occurred
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | FabricErrorException: Fabric.Clients.CSharp.Fluent.FabricErrorException: invalid_request
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 52
+   at Fabric.Clients.CSharp.Fluent.OauthAccess_tokenClient_credentials.Get(String redirect_uri, String client_secret, String client_id) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 2681
+   at Fabric.Clients.CSharp.Fluent.Session.AppSession.GetClientAccess() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\AppSession.cs:line 45
+   at Fabric.Clients.CSharp.Fluent.Session.OauthSession.GetAccessToken(Func`1 pAccessFunc) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Session\OauthSession.cs:line 50
+- Fabric | Debug | eca3e0da5872441ebdb95822ddc48f55 | Request Error: {"StatusCode":401,"Name":"FabAuthorizationFault","Description":"This function or action requires App authentication."} (IsOauthError=False)
+- Fabric | Error | eca3e0da5872441ebdb95822ddc48f55 | Request Exception: FabAuthorizationFault / 401 / This function or action requires App authentication.
+- **** Application_Error(): Fabric.Clients.CSharp.Fluent.FabricErrorException: FabAuthorizationFault
+   at Fabric.Clients.CSharp.Fluent.Web.FabricRequest`1.Send(ClientContext pContext) in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Web\FabricRequest.cs:line 46
+   at Fabric.Clients.CSharp.Fluent.CoreVersion.Get() in Z:\Work\AestheticInteractive\FabricProject\Clients\Fabric.Clients.CSharp.Fluent\Solution\Fluent\Generated\FabricClientGenerated.cs:line 484
+   at Gallery.Web.Controllers.HomeController.UpdateFabricVersion() in Z:\Work\AestheticInteractive\FabricProject\Apps\KinstnerGallery2\Solution\Gallery.Web\Controllers\HomeController.cs:line 128
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<>c__DisplayClassb.<BeginProcessRequest>b__5()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass1.<MakeVoidDelegate>b__0()
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClasse.<EndProcessRequest>b__d()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) // 
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New FabricClient
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request initiated...
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request initiated...
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request Path: GET oauth/access_token/client_credentials
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request URL: http://intheFabric.com/api/oauth/access_token/client_credentials?redirect_uri=http%3a%2f%2fzachkinstner.com%2fgallery%2fHome%2fOAuthRedirect&client_secret=0123456789abcdefghijkLMNOPqrstuv&client_id=2
+- Fabric | Debug | eca3e0da5872441ebdb95822ddc48f55 | Request Response: {"access_token":"817c1b10b6404845a7a246e98785e1ad","token_type":"bearer","expires_in":"3600"}
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | App GetAccessToken: BearerToken=817c1b10b6404845a7a246e98785e1ad, RefreshToken=, Expiration=8/12/2012 2:47:11 PM, Now=8/12/2012 1:48:11 PM
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request Path: GET core/version
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request URL: http://intheFabric.com/api/core/version
+- Fabric | Debug | eca3e0da5872441ebdb95822ddc48f55 | Request Response: {"version":"1.1.0.bb187d5a7785"}
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- SELECT this_.PhotoId as PhotoId1_0_, this_.ImgName as ImgName1_0_, this_.Favorite as Favorite1_0_, this_.ExifDTOrig as ExifDTOrig1_0_, this_.ExifExposureTime as ExifExpo5_1_0_, this_.ExifISOSpeed as ExifISOS6_1_0_, this_.ExifFNumber as ExifFNum7_1_0_, this_.ExifFocalLength as ExifFoca8_1_0_, this_.FabricArtifactId as FabricAr9_1_0_, this_.FabricTalkId as FabricT10_1_0_, this_.AlbumId as AlbumId1_0_ FROM gallery.Photo this_ WHERE this_.Favorite > @p0 ORDER BY this_.ExifDTOrig desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as TagId4_0_, this_.Name as Name4_0_ FROM gallery.Tag this_
+- SELECT * FROM gallery.Photo INNER JOIN gallery.PhotoTag AS Pt0 ON Pt0.PhotoId=Photo.PhotoId WHERE Favorite >= 0 AND Pt0.TagId=1 ORDER BY ExifDTOrig DESC
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New FabricClient
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request initiated...
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | IsRefreshNecessary: App expires in 3530.3747831 sec
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request Path: GET core/version
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request URL: http://intheFabric.com/api/core/version
+- Fabric | Debug | eca3e0da5872441ebdb95822ddc48f55 | Request Response: {"version":"1.1.0.bb187d5a7785"}
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New FabricClient
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request initiated...
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | IsRefreshNecessary: App expires in 3478.520292 sec
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request Path: GET core/version
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request URL: http://intheFabric.com/api/core/version
+- Fabric | Debug | eca3e0da5872441ebdb95822ddc48f55 | Request Response: {"version":"1.1.0.bb187d5a7785"}
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New FabricClient
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request initiated...
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | IsRefreshNecessary: App expires in 3445.8070346 sec
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request Path: GET core/version
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | Request URL: http://intheFabric.com/api/core/version
+- Fabric | Debug | eca3e0da5872441ebdb95822ddc48f55 | Request Response: {"version":"1.1.0.bb187d5a7785"}
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- SELECT this_.PhotoId as PhotoId1_0_, this_.ImgName as ImgName1_0_, this_.Favorite as Favorite1_0_, this_.ExifDTOrig as ExifDTOrig1_0_, this_.ExifExposureTime as ExifExpo5_1_0_, this_.ExifISOSpeed as ExifISOS6_1_0_, this_.ExifFNumber as ExifFNum7_1_0_, this_.ExifFocalLength as ExifFoca8_1_0_, this_.FabricArtifactId as FabricAr9_1_0_, this_.FabricTalkId as FabricT10_1_0_, this_.AlbumId as AlbumId1_0_ FROM gallery.Photo this_ WHERE this_.Favorite > @p0 ORDER BY this_.ExifDTOrig desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as TagId4_0_, this_.Name as Name4_0_ FROM gallery.Tag this_
+- SELECT * FROM gallery.Photo INNER JOIN gallery.PhotoTag AS Pt0 ON Pt0.PhotoId=Photo.PhotoId WHERE Favorite >= 0 AND Pt0.TagId=1 ORDER BY ExifDTOrig DESC
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc
+- Fabric | Info  | eca3e0da5872441ebdb95822ddc48f55 | New FabricClient
+- SELECT this_.AlbumId as y0_, min(this_.Title) as y1_, count(phoalias1_.PhotoId) as y2_, min(phoalias1_.PhotoId) as y3_, min(phoalias1_.ExifDTOrig) as y4_, max(phoalias1_.ExifDTOrig) as y5_, (SELECT count(*) as y0_ FROM gallery.Photo this_0_ WHERE (this_0_.AlbumId = this_.AlbumId and this_0_.Favorite > @p0)) as y6_ FROM gallery.Album this_ inner join gallery.Photo phoalias1_ on this_.AlbumId=phoalias1_.AlbumId GROUP BY this_.AlbumId ORDER BY max(phoalias1_.ExifDTOrig) desc;@p0 = 0 [Type: Int32 (0)]
+- SELECT this_.TagId as y0_, phoalias2_.AlbumId as y1_, min(this_.Name) as y2_, count(this_.TagId) as y3_ FROM gallery.Tag this_ inner join gallery.PhotoTag phototag1_ on this_.TagId=phototag1_.TagId inner join gallery.Photo phoalias2_ on phototag1_.PhotoId=phoalias2_.PhotoId GROUP BY this_.TagId, phoalias2_.AlbumId ORDER BY count(this_.TagId) desc

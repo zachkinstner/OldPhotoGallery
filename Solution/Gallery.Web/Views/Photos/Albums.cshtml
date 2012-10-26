@@ -1,0 +1,20 @@
+﻿@model PhotosAlbumModel
+<div class="container">
+	@for ( int i = 0 ; i < Model.Photos.Count ; ++i ) {
+		bool first = (i%12 == 0);
+		bool last = (i%12 == 11);
+		string colClass = "onecol"+(last ? " last" : "");
+
+		if ( first ) {
+			@Html.Raw("<div class=\"row\">");
+		}
+		
+		<div class="@colClass">
+			@{ Html.RenderPartial("_CroppedPhoto", Model.Photos[i]); }
+		</div>	
+		
+		if ( last ) {
+			@Html.Raw("</div>");
+		}
+	}
+</div>

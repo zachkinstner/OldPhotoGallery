@@ -1,0 +1,191 @@
+/*==== DESKTOP =======================================================================================*/
+
+body {
+	font-family: Tahoma, Arial, Helvetica, Verdana, Sans-Serif;
+	font-size: 62.5%;
+	margin-bottom: 20px;
+	background-color: #303840;
+}
+
+p {
+	font-size: 1.2em;
+	color: #808890;
+}
+
+em {
+	font-family: 'Trebuchet MS' , Tahoma, Arial, Verdana, Sans-Serif;
+	font-style: italic;
+}
+
+a {
+	color: #e0e8f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #55aaff;
+}
+
+a:hover img {
+	background-color: #55aaff;
+}
+
+.row {
+	margin-bottom: 0.5%;
+}
+
+/* --- */
+
+div.thumbCrop {
+	overflow: hidden;
+	border: 1px solid #202830;
+	background-color: #384048;
+}
+
+div.thumbCrop:hover {
+	border: 1px solid #55aaff;
+}
+
+a.thumbLink {
+	display: block;
+}
+
+img.thumb {
+}
+
+div.mainPhotoCol {
+	text-align: center;
+}
+
+div.mainPhotoCol div.hold {
+	background-color: #283038;
+	max-width: 1024px;
+}
+
+/* --- */
+
+div.topMenu {
+	padding-top: 5px;
+	padding-bottom: 2px;
+	margin-bottom: 20px;
+	background-color: #202830;
+	border-bottom: 1px solid #404850;
+}
+
+div.topMenu div.title {
+	color: #fff;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	font-weight: bold;
+}
+
+div.topMenu div.items {
+	text-align: right;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	color: #808890;
+}
+
+/* --- */
+
+p.albumSummary {
+	text-align: center;
+	margin: 10px 0 10px 0;
+}
+
+p.albumSummary a.title {
+	font-size: 1.333em; /* == 1.6em */
+}
+
+/* --- */
+
+a.tagBox {
+	background-color: #404850;
+	padding: 1px 4px 1px 4px;
+	margin-bottom: 4px;
+	display: inline-block;
+	border: 1px solid #202830;
+}
+
+a.tagBox:hover {
+	border: 1px solid #55aaff;
+	color: #fff;
+}
+
+a.tagBox span.count {
+	font-size: 0.9em;
+	color: #707880;
+}
+
+
+/*==== MOBILE ========================================================================================*/
+
+@media handheld, only screen and (max-width: 767px) {
+
+	.row {
+		margin-bottom: 0;
+	}
+
+	.row .onecol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .twocol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .threecol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .fourcol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .fivecol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .sixcol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .sevencol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .eightcol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .ninecol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .tencol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .elevencol {
+		margin-bottom: 1.5%;
+	}
+
+	.row .twelvecol {
+		margin-bottom: 1.5%;
+	}
+
+	div.topMenu div.title {
+		text-align: center;
+	}
+
+	div.topMenu div.items {
+		text-align: center;
+	}
+
+}
+
+/*==== RETINA ========================================================================================*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+}

@@ -1,0 +1,31 @@
+﻿@model HomeIndexModel
+<div class="container">
+	@for ( int i = 0 ; i < Model.Albums.Count ; ++i ) {
+		int ii = i-3;
+		bool first = (ii%4 == 0);
+		bool last = (ii%4 == 3);
+		string colClass = "threecol";
+
+		if ( i < 3 ) {
+			first = (i%3 == 0);
+			last = (i%3 == 2);
+			colClass = "fourcol";
+		}
+
+		if ( last ) {
+			colClass += " last";
+		}
+
+		if ( first ) {
+			@Html.Raw("<div class=\"row\">");
+		}
+		
+		<div class="@colClass">
+			@{ Html.RenderPartial("_IndexAlbum", Model.Albums[i]); }
+		</div>	
+		
+		if ( last ) {
+			@Html.Raw("</div>");
+		}
+	}
+</div>

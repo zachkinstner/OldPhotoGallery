@@ -1,0 +1,9 @@
+﻿@model WebAlbum
+@{
+	var link = new ActionLinkModel<PhotosController>(x => x.Albums(Model.AlbumId), Model.Title);
+}
+<div class="thumbCrop">
+	<a class="thumbLink" href="@Html.ActionLinkUrl(link)" title="@Model.Title" >
+		<img src="@Model.FirstPhoto.ImageUrl" class="thumb" alt="@Model.Title" />
+	</a>
+</div>

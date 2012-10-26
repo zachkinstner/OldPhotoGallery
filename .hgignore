@@ -1,0 +1,10 @@
+syntax: glob
+Solution/_ReSharper.Gallery
+*.suo
+*.user
+*/bin/*
+*/obj/*
+VisualizeHg.bat
+Fabric.*.log
+Fabric.*.log.*
+Solution/Gallery.Web/NHibernate.config

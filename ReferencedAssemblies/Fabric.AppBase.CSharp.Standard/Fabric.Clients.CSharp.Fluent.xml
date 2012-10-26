@@ -1,0 +1,3317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fabric.Clients.CSharp.Fluent</name>
+    </assembly>
+    <members>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabricErrorException">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricErrorException.#ctor(Fabric.Clients.CSharp.Fluent.FabError)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricErrorException.#ctor(Fabric.Clients.CSharp.Fluent.FabOauthError)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricErrorException.Error">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricErrorException.OauthError">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabricClientUtil">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClientUtil.batchIdString``1(System.Collections.Generic.IList{``0})">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.Session.FabricSessionContainer">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.Session.IFabricSessionContainer">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.Session.IFabricSessionContainer.Person">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.Session.FabricSessionContainer.Person">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.Session.IFabricOauthSession">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Session.IFabricOauthSession.Logout">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Session.IFabricOauthSession.RefreshTokenIfNecessary">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.Session.IFabricOauthSession.GrantCode">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.Session.IFabricOauthSession.BearerToken">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.Session.IFabricOauthSession.RefreshToken">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.Session.IFabricOauthSession.IsAuthenticated">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.Session.IFabricOauthSession.Expiration">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.Session.IFabricOauthSession.SessionId">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.Session.IFabricAppSession">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Session.IFabricAppSession.RequestAuthentication">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.Session.IFabricPersonSession">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Session.IFabricPersonSession.GetGrantCodeUrl(System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Session.IFabricPersonSession.GetGrantWindowOpenScript(System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Session.IFabricPersonSession.HandleGrantCodeRedirect(System.Web.HttpRequestBase)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabricClient">
+            <summary />
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IFabricClient">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IHideSystemIntellisense">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IHideSystemIntellisense.GetType">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IHideSystemIntellisense.GetHashCode">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IHideSystemIntellisense.ToString">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IHideSystemIntellisense.Equals(System.Object)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClient.Config">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClient.PersonSession">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClient.AppSession">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClient.AppDataProvSession">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClient.Core">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClient.Batch">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClient.Social">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClient.Oauth">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClient.UseDataProviderPerson">
+            <summary />
+        </member>
+        <member name="F:Fabric.Clients.CSharp.Fluent.FabricClient.Version">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClient.ResetInitialization">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClient.InitOnce(Fabric.Clients.CSharp.Fluent.IFabricClientConfig)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClient.AddConfig(Fabric.Clients.CSharp.Fluent.IFabricClientConfig)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClient.#ctor">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClient.#ctor(System.String)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.IsInitialized">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.Config">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.PersonSession">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.AppSession">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.AppDataProvSession">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.Core">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.Batch">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.Social">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.Oauth">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClient.UseDataProviderPerson">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICore">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Apps">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Artifacts">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Descriptors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Directors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Eventors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Factors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Identors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Labels">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Locators">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Members">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Things">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Urls">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Users">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Vectors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Version">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Myapp">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICore.Me">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatch">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Artifacts">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Crowds">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Descriptors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Directors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Eventors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Factors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Identors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Labels">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Locators">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Things">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Urls">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Users">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Vectors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Myapp">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatch.Me">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocial">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocial.Crowdians">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocial.Crowds">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocial.Relations">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocial.Comments">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocial.Threads">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocial.Artifacts">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocial.Myapp">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocial.Me">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IOauth">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IOauth.Get(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+              <para>This API request is unique -- it represents the entry point for Fabric's OAuth 2.0 authentication process.  Instead of making this API request directly from a Fabric App, the App should provide a link so that its users can load this request's URL (including the required query-string parameters) in their browser.</para>
+              <para>A web-based Fabric App would typically load this OAuth entry page as a browser popup window. Once the user completes the full OAuth process (or upon an error), Fabric will redirect the browser to the App's specified redirect URI.  This redirect includes query-string parameters that provide success or error information.</para>
+              <para>For a user, this OAuth process includes two steps: login and 'scope' acceptance.</para>
+              <para>The first step is login, where the user is prompted to enter their username and password.  If a user has already logged into Fabric (i.e. has an active authentication cookie from Fabric) and the App has not requested 'switchMode', the login step is skipped.  Important note: login occurs on Fabric's server -- a Fabric App never receives or sends a Fabric user's login credentials.</para>
+              <para>The second step is 'scope' acceptance.  The page tells the user that a particular Fabric App wants to connect to their Fabric account, and briefly explains what this means to the user and the App. The user must accept or deny access.  Upon acceptance, the page redirects to the App with a 'success' message.  Upon denial, Fabric performs an error redirect.</para>
+              <para>Similar to the login step, if a user has already accepted 'scope' for a particular App, the second step is skipped.  Thus, in the case where a user is already authenticated with Fabric and has already allowed App access, the entire process results in a success redirect.</para>
+              <para>See the return type DTO for the query-string parameters that can be included in the success and error redirects.</para>
+            </summary>
+            <param name="response_type">Describes which type of authentication should be performed. For now, this value should always be 'code'. Fabric may accept more response types in the future.</param>
+            <param name="client_id">The ID of the Fabric App making the OAuth Login request.  The access code provided after a successful OAuth process will be associated with this App ID and the authenticated User's ID.</param>
+            <param name="redirect_uri">The URL which will receive success/error redirects from the OAuth Login process.  This URL should handle the following query-string parameters: access_code, error, error_description, state.</param>
+            <param name="scope">(Optional) Describes the level of access the App will have to the User's account.  This value is required by the OAuth 2.0 specification, however, Fabric currently ignores it.  All OAuth requests currently receive the same level of access to the User's account.  Fabric may begin using this parameter in the future.</param>
+            <param name="state">(Optional) Provides a security function for a Fabric App.  All success/message redirect responses include a 'state' query-string parameter.  The App should check this value against the state value provided in the initial request.  The two values should always be equal.  If the values are not equal, then the redirect did not come from the Fabric OAuth process (or from a different user's process), and should be handled accordingly.</param>
+            <param name="switchMode">(Optional) Causes the login process to behave in different ways.  If a value of '1' is provided, the user will see the login page even if they are currently authenticated with Fabric.  This is useful shared-computer scenarios, where the most-recently authenticated user may be different from the user making the current request.</param>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IOauth.Access_token">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IOauth.Logout">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreApps">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreApps.AppId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreArtifacts">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreArtifacts.ArtifactId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreArtifacts.Types">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDescriptors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDescriptors.DescriptorId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreDescriptors.Types">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDirectors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDirectors.DirectorId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreDirectors.Actions">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreDirectors.Types">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreEventors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreEventors.EventorId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreEventors.Precisions">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreEventors.Types">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreFactors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreFactors.FactorId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreFactors.Assertions">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreIdentors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreIdentors.IdentorId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreIdentors.Types">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreLabels">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreLabels.LabelId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreLabels.Name">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreLocators">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreLocators.LocatorId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreLocators.Types">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMembers">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMembers.Types">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreThings">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreThings.ThingId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreUrls">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreUrls.UrlId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreUrls.FullUrl">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreUsers">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreUsers.UserId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreUsers.Username">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectors.VectorId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreVectors.Ranges">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreVectors.Types">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreVectors.Units">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVersion">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVersion.Get">
+            <summary>
+              <para>Get the current Fabric API version.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyapp">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyapp.Get">
+            <summary>
+              <para>Get information about your App.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMyapp.Artifacts">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMyapp.Factors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMyapp.Members">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMyapp.Things">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMe">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMe.Get">
+            <summary>
+              <para>Get your User information.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMe.Artifacts">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMe.Factors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMe.Labels">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMe.Things">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMe.Urls">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchArtifacts">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchArtifacts.ArtifactIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchCrowds">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchCrowds.CrowdIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchDescriptors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchDescriptors.DescriptorIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchDirectors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchDirectors.DirectorIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchEventors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchEventors.EventorIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchFactors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchFactors.FactorIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchIdentors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchIdentors.IdentorIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchLabels">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchLabels.LabelIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchLocators">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchLocators.LocatorIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchThings">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchThings.ThingIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchUrls">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchUrls.UrlIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchUsers">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchUsers.UserIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchVectors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchVectors.VectorIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMyapp">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatchMyapp.Factors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatchMyapp.Members">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMe">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatchMe.Artifacts">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatchMe.Crowds">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IBatchMe.Relations">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialCrowdians">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialCrowdians.CrowdianId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialCrowdians.Types">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialCrowds">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialCrowds.CrowdId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialRelations">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialRelations.Types">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialComments">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialComments.CommentId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialThreads">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialThreads.ThreadId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialArtifacts">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialArtifacts.ArtifactId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMyapp">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMyapp.Crowds">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMe">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMe.Crowdians">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMe.Crowds">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMe.Relations">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMe.Users">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMe.Comments">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMe.Threads">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMe.Artifacts">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IOauthAccess_token">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IOauthAccess_token.Get(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+              <para>Obtain an OAuth access token using one of four 'flows'.  Fabric offers separate requests for these access token flows, but also provides this generic request for compatibility with the OAuth 2.0 specification.</para>
+              <para>An OAuth access token should be included with every Fabric API request (with the exception of the OAuth requests).  This token is the result of a successful login, an accepted App scope, a confirmed App secret code, and a confirmed authorization code.  Thus, each token is associated with a specific App, User, and successful OAuth process.  When included with an API request, Fabric obtains the relevant App and User ID values, and generates a response accordingly.</para>
+              <para>See the other access token requests for further information about the available flows.</para>
+            </summary>
+            <param name="grant_type">Defines the desired access token flow.  The four accepted (case-sensitive) values are 'authorization_code', 'refresh_token', 'client_credentials', and 'client_dataprov'.</param>
+            <param name="redirect_uri">This value must be exactly the same as the redirect URI provided for the OAuth entry process. </param>
+            <param name="client_secret">The 32-letter (alpha-numeric) secret code for the Fabric App making the request. This verifies that the App itself is making the request, and not an imposter.  For this reason, the secret code should not be shared with anyone.</param>
+            <param name="code">(Optional) The authorization code obtained after a successful OAuth entry process. This parameter is only used by the 'authorization_code' flow.</param>
+            <param name="refresh_token">(Optional) The refresh token obtained after a successful 'authorization_code' access token flow.  A refresh token only applies to User-based OAuth sessions, not for App-based OAuth sessions.  This parameter is only used by the 'refresh_token' flow.</param>
+            <param name="client_id">(Optional) The App ID value (an integer) for the App making the request. This parameter is only used by the 'client_credentials' and 'client_dataprov' flows.</param>
+            <param name="data_prov_userid">(Optional) The User ID value (an integer) for the Data Provider of the App making the request. Upon App creation, Fabric creates a special 'Data Provider' User which the App uses for creating items in the Fabric system. This parameter is only used by the 'client_dataprov' flow.</param>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IOauthAccess_token.Authorization_code">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IOauthAccess_token.Client_credentials">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IOauthAccess_token.Client_dataprov">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IOauthAccess_token.Refresh_token">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IOauthLogout">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IOauthLogout.Get(System.String)">
+            <summary>
+              <para>Terminates a particular OAuth session by invalidating the session's access token. Any further OAuth requests made with this particular access token are rejected.</para>
+              <para>Logging out of an OAuth session does not revoke the the App scope accepted by the User (during the first OAuth login process).  Furthermore, it does not end the User's authenticated session with Fabric.  Thus, a subsequent OAuth entry by the same user may actually require zero input from the user -- they could potentially bypass both OAuth entry steps (login and scope acceptance).  This allows a user to begin a new OAuth session seamlessly, even after logging out.</para>
+            </summary>
+            <param name="access_token">The access token for the desired OAuth session. This request will fail if the token has already been invalidated by a previous logout.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreAppsAppid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreAppsAppid.Get">
+            <summary>
+              <para>Get information about an App.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreArtifactsArtifactid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreArtifactsArtifactid.Get">
+            <summary>
+              <para>Get a non-private Artifact. Only a few Artifact types are private, such as Relation-based and private-Crowd-based Artifacts. To access a private Artifact, use the associated 'Core Me' API request.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreArtifactsArtifactid.Factors">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreArtifactsTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreArtifactsTypes.ArtifactTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreArtifactsTypes.Get">
+            <summary>
+              <para>Get a list of ArtifactTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDescriptorsDescriptorid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDescriptorsDescriptorid.Get">
+            <summary>
+              <para>Get a Descriptor.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDescriptorsTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDescriptorsTypes.DescriptorTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDescriptorsTypes.Get">
+            <summary>
+              <para>Get a list of DescriptorTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDirectorsActions">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDirectorsActions.DirectorActionId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDirectorsActions.Get">
+            <summary>
+              <para>Get a list of DirectorActions.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDirectorsDirectorid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDirectorsDirectorid.Get">
+            <summary>
+              <para>Get a Director.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDirectorsTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDirectorsTypes.DirectorTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDirectorsTypes.Get">
+            <summary>
+              <para>Get a list of DirectorTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreEventorsPrecisions">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreEventorsPrecisions.EventorPrecisionId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreEventorsPrecisions.Get">
+            <summary>
+              <para>Get a list of EventorPrecisions.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreEventorsEventorid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreEventorsEventorid.Get">
+            <summary>
+              <para>Get a Eventor.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreEventorsTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreEventorsTypes.EventorTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreEventorsTypes.Get">
+            <summary>
+              <para>Get a list of EventorTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreFactorsAssertions">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreFactorsAssertions.FactorAssertionId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreFactorsAssertions.Get">
+            <summary>
+              <para>Get a list of FactorAssertions.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreFactorsFactorid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreFactorsFactorid.Get">
+            <summary>
+              <para>Get a Factor. The Factor must be public.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreIdentorsIdentorid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreIdentorsIdentorid.Get">
+            <summary>
+              <para>Get a Identor.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreIdentorsTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreIdentorsTypes.IdentorTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreIdentorsTypes.Get">
+            <summary>
+              <para>Get a list of IdentorTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreLabelsLabelid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreLabelsLabelid.Get">
+            <summary>
+              <para>Get a Label.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreLabelsName">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreLabelsName.Get(System.String)">
+            <summary>
+              <para>Get a Label by its name.</para>
+            </summary>
+            <param name="name">The name of the desired Label.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreLocatorsLocatorid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreLocatorsLocatorid.Get">
+            <summary>
+              <para>Get a Locator.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreLocatorsTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreLocatorsTypes.LocatorTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreLocatorsTypes.Get">
+            <summary>
+              <para>Get a list of LocatorTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMembersTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMembersTypes.MemberTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMembersTypes.Get">
+            <summary>
+              <para>Get a list of MemberTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreThingsThingid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreThingsThingid.Get">
+            <summary>
+              <para>Get a Thing.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreUrlsUrlid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreUrlsUrlid.Get">
+            <summary>
+              <para>Get a Url.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreUrlsFullurl">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreUrlsFullurl.Get(System.String)">
+            <summary>
+              <para>Get a Url via URL.</para>
+            </summary>
+            <param name="fullUrl">A valid FullUrl with length between 6 and 450 chars.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreUsersUserid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreUsersUserid.Get">
+            <summary>
+              <para>Get a User.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreUsersUsername">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreUsersUsername.Get(System.String)">
+            <summary>
+              <para>Get a User by username. The username is not case-sensitive.</para>
+            </summary>
+            <param name="username">The desired User's username.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectorsRanges">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsRanges.VectorRangeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsRanges.Get">
+            <summary>
+              <para>Get a list of VectorRanges.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectorsVectorid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsVectorid.Get">
+            <summary>
+              <para>Get a Vector.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectorsTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsTypes.VectorTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsTypes.Get">
+            <summary>
+              <para>Get a list of VectorTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnits">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnits.VectorUnitId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnits.Get">
+            <summary>
+              <para>Get a list of VectorUnits.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnits.Prefixes">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappArtifacts">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappArtifacts.Get">
+            <summary>
+              <para>Get a list of Artifacts which were created with your App.</para>
+            </summary>
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappArtifacts.ArtifactId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappFactors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappFactors.FactorId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappMembers">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappMembers.MemberId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappMembers.Get">
+            <summary>
+              <para>Get a list of your App's Members.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappThings">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMyappThings.Classes">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMyappThings.Instances">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeArtifacts">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeArtifacts.PrivateArtifactId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeArtifacts.ArtifactId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeArtifacts.PrimaryArtifactId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeFactors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeFactors.FactorId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeLabels">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeLabels.Post(System.String)">
+            <summary>
+              <para>Add a new Label. The Label's name must be unique.</para>
+            </summary>
+            <param name="name">The name of the new Label, with length between 1 and 128 chars. The name string is restricted to the 'Title' character set (includes alpha-numeric, space, and the following characters: !@#$%^&amp;*()-_+={}[]|;:'",.&lt;&gt;?/\~).</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeThings">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeThings.Classes">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeThings.Instances">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeUrls">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeUrls.Post(System.String,System.String)">
+            <summary>
+              <para>Add a new Url.</para>
+            </summary>
+            <param name="fullUrl">The FullUrl value of this Url, with length between 6 and 450 chars. It must include the path's protocol, such as 'http://').</param>
+            <param name="name">The Name of this Url, with length between 0 and 128 chars.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchArtifactsArtifactids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchArtifactsArtifactids.Get">
+            <summary>
+              <para>Get multiple non-private Artifacts. To access private Artifacts, use the associated 'Batch Me' API request.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchCrowdsCrowdids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchCrowdsCrowdids.Get">
+            <summary>
+              <para>Get multiple non-private Crowds. To access private Crowds, use the associated 'Batch Me' API request.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchDescriptorsDescriptorids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchDescriptorsDescriptorids.Get">
+            <summary>
+              <para>Get multiple Descriptors.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchDirectorsDirectorids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchDirectorsDirectorids.Get">
+            <summary>
+              <para>Get multiple Directors.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchEventorsEventorids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchEventorsEventorids.Get">
+            <summary>
+              <para>Get multiple Eventors.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchFactorsFactorids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchFactorsFactorids.Get">
+            <summary>
+              <para>Get multiple Factors. The Factors must be public.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchIdentorsIdentorids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchIdentorsIdentorids.Get">
+            <summary>
+              <para>Get multiple Identors.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchLabelsLabelids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchLabelsLabelids.Get">
+            <summary>
+              <para>Get multiple Labels.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchLocatorsLocatorids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchLocatorsLocatorids.Get">
+            <summary>
+              <para>Get multiple Locators.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchThingsThingids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchThingsThingids.Get">
+            <summary>
+              <para>Get multiple Things.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchUrlsUrlids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchUrlsUrlids.Get">
+            <summary>
+              <para>Get multiple Urls.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchUsersUserids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchUsersUserids.Get">
+            <summary>
+              <para>Get multiple Users.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchVectorsVectorids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchVectorsVectorids.Get">
+            <summary>
+              <para>Get multiple Vectors.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMyappFactors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMyappFactors.FactorIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMyappMembers">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMyappMembers.MemberIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMeArtifacts">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMeArtifacts.PrivateArtifactIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMeCrowds">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMeCrowds.PrivateCrowdIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMeRelations">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMeRelations.RelationIds(System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialCrowdiansCrowdianid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialCrowdiansCrowdianid.Get">
+            <summary>
+              <para>Get a Crowdian from a non-private Crowd. To access a Crowdians from a private Crowd, use the associated 'Social Me' API request.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialCrowdsCrowdid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialCrowdsCrowdid.Get">
+            <summary>
+              <para>Get a non-private Crowd. To access a private Crowd, use the associated 'Social Me' API request.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialCrowdsCrowdid.Crowdians">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialCrowdiansTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialCrowdiansTypes.CrowdianTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialCrowdiansTypes.Get">
+            <summary>
+              <para>Get a list of CrowdianTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialRelationsTypes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialRelationsTypes.RelationTypeId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialRelationsTypes.Get">
+            <summary>
+              <para>Get a list of RelationTypes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialCommentsCommentid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialCommentsCommentid.Get">
+            <summary>
+              <para>Get a TalkComment.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialThreadsThreadid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialThreadsThreadid.Get">
+            <summary>
+              <para>Get a TalkThread.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialThreadsThreadid.Comments">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialArtifactsArtifactid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialArtifactsArtifactid.Threads">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMyappCrowds">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMyappCrowds.Get">
+            <summary>
+              <para>Get a list of non-private Crowds that were created via your App.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdians">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdians.CrowdianId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowds">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowds.AdmCrowdId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowds.MemCrowdId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowds.PrivateCrowdId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowds.PrivCrowdId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowds.ReqCrowdId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowds.Get">
+            <summary>
+              <para>Get a list of private Crowds (also known as 'Circles') that you own.</para>
+            </summary>
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowds.Post(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+              <para>Add a new Crowd.</para>
+            </summary>
+            <param name="name">The name of the new Crowd, with length between 4 and 64 characters. The name string is restricted to the 'Title' character set (includes alpha-numeric, space, and the following characters: !@#$%^&amp;*()-_+={}[]|;:'",.&lt;&gt;?/\~).</param>
+            <param name="description">The description of the new Crowd, with length less than 256 characters. The description string is restricted to the 'Title' character set (includes alpha-numeric, space, and the following characters: !@#$%^&amp;*()-_+={}[]|;:'",.&lt;&gt;?/\~).</param>
+            <param name="isPrivate">The privacy state of the new Crowd. Only the Crowd's creator can access a private Crowd, while anyone can access a non-private Crowd.</param>
+            <param name="isInviteOnly">The invitation state of the new Crowd. A User must be invited by the Crowd's creator before joining an closed Crowd, while anyone can join an open Crowd. All private Crowds must also be closed Crowds (attempting otherwise results in an error).</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeRelations">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeRelations.RelationId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeRelations.Get(System.Int32,System.Nullable{System.UInt32})">
+            <summary>
+              <para>Get a list of Relations.</para>
+            </summary>
+            <param name="incoming">If set to 1, the response only considers Relations which point to you (created by another User). Otherwise, the response only considers Relations you created.</param>
+            <param name="relationTypeId">(Optional) Identifies the desired RelationType.</param>
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeRelations.Post(System.UInt32,System.Nullable{System.UInt32})">
+            <summary>
+              <para>Add a new Relation between you and the specified User. This Relation is described by the specified RelationType.</para>
+              <para>If a Relation already exists (between you and the User), this request will update its RelationType.</para>
+            </summary>
+            <param name="userId">Identifies the desired User.</param>
+            <param name="relationTypeId">(Optional) Identifies the desired RelationType.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeUsers">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeUsers.UserId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeComments">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeComments.CommentId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeThreads">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeThreads.ThreadId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeArtifacts">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeArtifacts.ArtifactId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IOauthAccess_tokenAuthorization_code">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IOauthAccess_tokenAuthorization_code.Get(System.String,System.String,System.String)">
+            <summary>
+              <para>The 'authorization_code' flow should be used immediately after obtaining an authorization code from the OAuth entry process. Fabric verifies the authorization code, determines the associated App and User IDs, and generates a new access token.</para>
+              <para>For additional information, see the generic access token request's documentation.</para>
+            </summary>
+            <param name="redirect_uri">This value must be exactly the same as the redirect URI provided for the OAuth entry process. </param>
+            <param name="client_secret">The 32-letter (alpha-numeric) secret code for the Fabric App making the request. This verifies that the App itself is making the request, and not an imposter.  For this reason, the secret code should not be shared with anyone.</param>
+            <param name="code">The authorization code obtained after a successful OAuth entry process. This parameter is only used by the 'authorization_code' flow.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IOauthAccess_tokenClient_credentials">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IOauthAccess_tokenClient_credentials.Get(System.String,System.String,System.String)">
+            <summary>
+              <para>The 'client_credentials' flow should be used to begin an OAuth session for your Fabric App. This flow does not require an authorization code from the typical OAuth entry process.</para>
+              <para>For additional information, see the generic access token request's documentation.</para>
+            </summary>
+            <param name="redirect_uri">This value must be exactly the same as the redirect URI provided for the OAuth entry process. </param>
+            <param name="client_secret">The 32-letter (alpha-numeric) secret code for the Fabric App making the request. This verifies that the App itself is making the request, and not an imposter.  For this reason, the secret code should not be shared with anyone.</param>
+            <param name="client_id">The App ID value (an integer) for the App making the request. This parameter is only used by the 'client_credentials' and 'client_dataprov' flows.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IOauthAccess_tokenClient_dataprov">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IOauthAccess_tokenClient_dataprov.Get(System.String,System.String,System.String,System.String)">
+            <summary>
+              <para>The 'client_dataprov' flow should be used to begin an OAuth session for your Fabric App's Data Provider User. This flow does not require an authorization code from the typical OAuth entry process. Note: this flow is not defined by the OAuth 2.0 specification; it is specifically designed to meet a Fabric App's OAuth needs.</para>
+              <para>For additional information, see the generic access token request's documentation.</para>
+            </summary>
+            <param name="redirect_uri">This value must be exactly the same as the redirect URI provided for the OAuth entry process. </param>
+            <param name="client_secret">The 32-letter (alpha-numeric) secret code for the Fabric App making the request. This verifies that the App itself is making the request, and not an imposter.  For this reason, the secret code should not be shared with anyone.</param>
+            <param name="client_id">The App ID value (an integer) for the App making the request. This parameter is only used by the 'client_credentials' and 'client_dataprov' flows.</param>
+            <param name="data_prov_userid">The User ID value (an integer) for the Data Provider of the App making the request. Upon App creation, Fabric creates a special 'Data Provider' User which the App uses for creating items in the Fabric system. This parameter is only used by the 'client_dataprov' flow.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IOauthAccess_tokenRefresh_token">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IOauthAccess_tokenRefresh_token.Get(System.String,System.String,System.String)">
+            <summary>
+              <para>The 'refresh_token' flow should be used to refresh an expired access token. If the refresh token is valid, Fabric generates new access and refresh tokens for the given OAuth session. This process also invalidates the original refresh token.</para>
+              <para>App-only access tokens (obtained with the 'client_credentials' flow) should not be refreshed; the App should simply request a new access token.</para>
+              <para>For additional information, see the generic access token request's documentation.</para>
+            </summary>
+            <param name="redirect_uri">This value must be exactly the same as the redirect URI provided for the OAuth entry process. </param>
+            <param name="client_secret">The 32-letter (alpha-numeric) secret code for the Fabric App making the request. This verifies that the App itself is making the request, and not an imposter.  For this reason, the secret code should not be shared with anyone.</param>
+            <param name="refresh_token">The refresh token obtained after a successful 'authorization_code' access token flow.  A refresh token only applies to User-based OAuth sessions, not for App-based OAuth sessions.  This parameter is only used by the 'refresh_token' flow.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreArtifactsTypesArtifacttypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreArtifactsTypesArtifacttypeid.Get">
+            <summary>
+              <para>Get an ArtifactType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDescriptorsTypesDescriptortypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDescriptorsTypesDescriptortypeid.Get">
+            <summary>
+              <para>Get an DescriptorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDirectorsActionsDirectoractionid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDirectorsActionsDirectoractionid.Get">
+            <summary>
+              <para>Get an DirectorAction.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreDirectorsTypesDirectortypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreDirectorsTypesDirectortypeid.Get">
+            <summary>
+              <para>Get an DirectorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreEventorsPrecisionsEventorprecisionid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreEventorsPrecisionsEventorprecisionid.Get">
+            <summary>
+              <para>Get an EventorPrecision.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreEventorsTypesEventortypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreEventorsTypesEventortypeid.Get">
+            <summary>
+              <para>Get an EventorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreFactorsAssertionsFactorassertionid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreFactorsAssertionsFactorassertionid.Get">
+            <summary>
+              <para>Get an FactorAssertion.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreArtifactsArtifactidFactors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreArtifactsArtifactidFactors.Get(System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.UInt32})">
+            <summary>
+              <para>Get a list of Factors which are associated with the specified Artifact. The list will only include public Factors.</para>
+            </summary>
+            <param name="isPrimaryArtifact">When set to true, the list includes Factors which use the specified Artifact as the 'primary' Artifact (each Factor is descibing the specified Artifact). When set to false, the 'related' Artifact is considered instead (each Factor uses the specified Artifact to describe other ones).</param>
+            <param name="isDefiningFilter">(Optional) When specified, the list will be filtered based on the IsDefining value.</param>
+            <param name="factorAssertionIdFilter">(Optional) When specified, the list will be filtered based on the FactorAssertion type.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreIdentorsTypesIdentortypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreIdentorsTypesIdentortypeid.Get">
+            <summary>
+              <para>Get an IdentorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreLocatorsTypesLocatortypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreLocatorsTypesLocatortypeid.Get">
+            <summary>
+              <para>Get an LocatorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMembersTypesMembertypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMembersTypesMembertypeid.Get">
+            <summary>
+              <para>Get a MemberType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectorsRangesVectorrangeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsRangesVectorrangeid.Get">
+            <summary>
+              <para>Get an VectorRange.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectorsTypesVectortypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsTypesVectortypeid.Get">
+            <summary>
+              <para>Get an VectorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnitsPrefixes">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnitsPrefixes.VectorUnitPrefixId(System.UInt32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnitsPrefixes.Get">
+            <summary>
+              <para>Get a list of VectorUnitPrefixes.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnitsVectorunitid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnitsVectorunitid.Get">
+            <summary>
+              <para>Get an VectorUnit.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappArtifactsArtifactid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMyappArtifactsArtifactid.Factors">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappFactorsFactorid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappFactorsFactorid.Get">
+            <summary>
+              <para>Get a Factor. The Factor must be public or owned by your App.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappMembersMemberid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappMembersMemberid.Get">
+            <summary>
+              <para>Get one of your App's Members.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappThingsClasses">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappThingsClasses.Get">
+            <summary>
+              <para>Get a list of Class-designated Things which were created with your App.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappThingsInstances">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappThingsInstances.Get">
+            <summary>
+              <para>Get a list of Instance-designated Things which were created with your App.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsPrivateartifactid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsPrivateartifactid.Get">
+            <summary>
+              <para>Get a private Artifact that you own. A private Artifact is generated when you create a new Relation or new Crowd, and you are considered the Artifact's owner.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactorid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactorid.Delete">
+            <summary>
+              <para>Delete a Factor. You must be the owner of this Factor.</para>
+            </summary>
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactorid.Put(System.Boolean)">
+            <summary>
+              <para>Set a Factor to the 'completed' state. You must be the owner of this Factor. Once a Factor is completed, it may not be further modified or filled. If you attempt to complete a Factor without attaching a Descriptor, the completion process will add a basic 'Is Related To' Descriptor by default.</para>
+            </summary>
+            <param name="isComplete">The IsComplete value for the Factor. This value must be true.</param>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactorid.Descriptors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactorid.Directors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactorid.Eventors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactorid.Identors">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactorid.Locators">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactorid.Vectors">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsArtifactid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsArtifactid.Factors">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsPrimaryartifactid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsPrimaryartifactid.Factors">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeThingsClasses">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeThingsClasses.Get">
+            <summary>
+              <para>Get a list of Class-designated Things you have created.</para>
+            </summary>
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeThingsClasses.Post(System.String,System.String,System.String,System.Nullable{System.UInt32})">
+            <summary>
+              <para>Create a Thing with a 'Class' designation. Apply additional Descriptors, Vectors, etc. immediately after creating a Class to give it meaning and relevance within Fabric.</para>
+            </summary>
+            <param name="name">The name of the new Thing. Classes must have a unique name, or unique combination of name and disambiguation. Instances do not require a name; the name (if provided) is not checked for uniqueness. The name string must be between 1 and 128 characters, and is restricted to the 'Title' character set (includes alpha-numeric, space, and the following characters: !@#$%^&amp;*()-_+={}[]|;:'",.&lt;&gt;?/\~).</param>
+            <param name="disambiguation">(Optional) The disambiguation value for the new Thing, used to resolve conflicts with duplicate names. The disambiguation string cannot be exceed 128 characters, and is restricted to the 'Title' character set (includes alpha-numeric, space, and the following characters: !@#$%^&amp;*()-_+={}[]|;:'",.&lt;&gt;?/\~).</param>
+            <param name="note">(Optional) A brief description of the new Thing. The note cannot exceed 256 characters.</param>
+            <param name="classIdForIsaDescriptor">(Optional) This value is optional for Classes, but required for Instances. This value must be an ID for a Class (a Class-designated Thing). Fabric finds this Class's associated Tag, and then attaches it (via 'Is A' Descriptor) to the new Thing's associated Artifact.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeThingsInstances">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeThingsInstances.Get">
+            <summary>
+              <para>Get a list of Instance-designated Things you have created.</para>
+            </summary>
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeThingsInstances.Post(System.UInt32,System.String,System.String,System.String)">
+            <summary>
+              <para>Create a Thing with an 'Instance' designation. A new Instance must belong (via 'Is A' Descriptor) to at least one Class, so this request requires the 'classIdForIsaDescriptor' parameter. Apply additional Descriptors, Vectors, etc. immediately after creating an Instance to give it meaning and relevance within Fabric.</para>
+            </summary>
+            <param name="classIdForIsaDescriptor">This value is optional for Classes, but required for Instances. This value must be an ID for a Class (a Class-designated Thing). Fabric finds this Class's associated Tag, and then attaches it (via 'Is A' Descriptor) to the new Thing's associated Artifact.</param>
+            <param name="name">(Optional) The name of the new Thing. Classes must have a unique name, or unique combination of name and disambiguation. Instances do not require a name; the name (if provided) is not checked for uniqueness. The name string must be between 1 and 128 characters, and is restricted to the 'Title' character set (includes alpha-numeric, space, and the following characters: !@#$%^&amp;*()-_+={}[]|;:'",.&lt;&gt;?/\~).</param>
+            <param name="disambiguation">(Optional) The disambiguation value for the new Thing, used to resolve conflicts with duplicate names. The disambiguation string cannot be exceed 128 characters, and is restricted to the 'Title' character set (includes alpha-numeric, space, and the following characters: !@#$%^&amp;*()-_+={}[]|;:'",.&lt;&gt;?/\~).</param>
+            <param name="note">(Optional) A brief description of the new Thing. The note cannot exceed 256 characters.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMyappFactorsFactorids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMyappFactorsFactorids.Get">
+            <summary>
+              <para>Get multiple Factors. The Factors must be public or owned by your App.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMyappMembersMemberids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMyappMembersMemberids.Get">
+            <summary>
+              <para>Get multiple Members.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMeArtifactsPrivateartifactids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMeArtifactsPrivateartifactids.Get">
+            <summary>
+              <para>Get multiple private Artifacts. You must be the owner of a private Artifact to access it.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMeCrowdsPrivatecrowdids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMeCrowdsPrivatecrowdids.Get">
+            <summary>
+              <para>Get multiple private Crowds. You must be the owner of a private Crowd to access it.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IBatchMeRelationsRelationids">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IBatchMeRelationsRelationids.Get">
+            <summary>
+              <para>Get multiple Relations.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialCrowdsCrowdidCrowdians">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialCrowdsCrowdidCrowdians.Get">
+            <summary>
+              <para>Get a list of Crowdians from a non-private Crowd. To access a Crowdians from a private Crowd, use the associated 'Social Me' API request.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialCrowdiansTypesCrowdiantypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialCrowdiansTypesCrowdiantypeid.Get">
+            <summary>
+              <para>Get a CrowdianType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialRelationsTypesRelationtypeid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialRelationsTypesRelationtypeid.Get">
+            <summary>
+              <para>Get a RelationType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialThreadsThreadidComments">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialThreadsThreadidComments.Get">
+            <summary>
+              <para>Get a list of TalkComments from a particular Thread.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialArtifactsArtifactidThreads">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialArtifactsArtifactidThreads.Get">
+            <summary>
+              <para>Get a list of TalkThreads from a particular Artifact.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdiansCrowdianid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdiansCrowdianid.Get">
+            <summary>
+              <para>Get a Crowdian from a private Crowd (also known as a 'Circle'). You must be the owner of this Crowd.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsAdmcrowdid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsAdmcrowdid.Crowdians">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsMemcrowdid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsMemcrowdid.Crowdians">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivatecrowdid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivatecrowdid.Get">
+            <summary>
+              <para>Get a private Crowd (also known as a 'Circle'). You must be the owner of this Crowd.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivatecrowdid.Crowdians">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivcrowdid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivcrowdid.Crowdians">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsReqcrowdid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsReqcrowdid.Crowdians">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeRelationsRelationid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeRelationsRelationid.Get">
+            <summary>
+              <para>Get a Relation.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeUsersUserid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeUsersUserid.Relation">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCommentsCommentid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCommentsCommentid.Delete">
+            <summary>
+              <para>Delete a TalkComment. You may only delete TalkComments which you created.</para>
+            </summary>
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCommentsCommentid.Put(System.String)">
+            <summary>
+              <para>Edit the text of a TalkComment. You may only edit TalkComments which you created.</para>
+            </summary>
+            <param name="text">The text to use for the new TalkComment, with length between 1 and 4096 characters. There are no character restrictions on the text string.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeThreadsThreadid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeThreadsThreadid.Put(System.String)">
+            <summary>
+              <para>Edit the title of a TalkThread. You may only edit TalkThreads which you created.</para>
+            </summary>
+            <param name="title">The title of the new TalkThread, with length between 4 and 64 characters. The title string is restricted to the 'Title' character set (includes alpha-numeric, space, and the following characters: !@#$%^&amp;*()-_+={}[]|;:'",.&lt;&gt;?/\~).</param>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeThreadsThreadid.Comments">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeArtifactsArtifactid">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeArtifactsArtifactid.Threads">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnitsPrefixesVectorunitprefixid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreVectorsUnitsPrefixesVectorunitprefixid.Get">
+            <summary>
+              <para>Get an VectorUnitPrefix.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMyappArtifactsArtifactidFactors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMyappArtifactsArtifactidFactors.Get(System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.UInt32})">
+            <summary>
+              <para>Get a list of Factors which are associated with the specified Artifact. The list will only include public Factors and Factors owned by your App.</para>
+            </summary>
+            <param name="isPrimaryArtifact">When set to true, the list includes Factors which use the specified Artifact as the 'primary' Artifact (each Factor is descibing the specified Artifact). When set to false, the 'related' Artifact is considered instead (each Factor uses the specified Artifact to describe other ones).</param>
+            <param name="isDefiningFilter">(Optional) When specified, the list will be filtered based on the IsDefining value.</param>
+            <param name="factorAssertionIdFilter">(Optional) When specified, the list will be filtered based on the FactorAssertion type.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridDescriptors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridDescriptors.Post(System.UInt32,System.Nullable{System.UInt32},System.Nullable{System.UInt32},System.Nullable{System.UInt32})">
+            <summary>
+              <para>Set the Descriptor for a Factor that you created.</para>
+            </summary>
+            <param name="descriptorTypeId">The DescriptorType for the new Descriptor.</param>
+            <param name="modifyPrimaryWithArtifactId">(Optional) The modifying Artifact for the Factor's primary Artifact.</param>
+            <param name="modifyDescriptorTypeWithArtifactId">(Optional) The modifying Artifact for the new Descriptor's DescriptorType.</param>
+            <param name="modifyRelatedWithArtifactId">(Optional) The modifying Artifact for the Factor's related Artifact.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridDirectors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridDirectors.Post(System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+              <para>Set the Director for a Factor that you created.</para>
+            </summary>
+            <param name="directorTypeId">The DirectorType for the new Director.</param>
+            <param name="primaryActionId">The DirectorAction associated with the Factor's primary Artifact.</param>
+            <param name="relatedActionId">The DirectorAction associated with the Factor's related Artifact.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridEventors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridEventors.Post(System.UInt32,System.UInt32,System.DateTime)">
+            <summary>
+              <para>Set the Eventor for a Factor that you created.</para>
+            </summary>
+            <param name="eventorTypeId">The EventorType for the new Eventor.</param>
+            <param name="eventorPrecisionId">The EventorPrecision for the new Eventor.</param>
+            <param name="dateTime">The date and time for the new Eventor. This value must be specified at least to the level of precision defined by the EventorPrecision. Set unused month/day values to 1, and unused hour/minute values (and beyond) to 0.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsArtifactidFactors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsArtifactidFactors.Get(System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.UInt32})">
+            <summary>
+              <para>Get a list of Factors which are associated with the specified Artifact. The list will only include public Factors and Factors you created via the current App.</para>
+            </summary>
+            <param name="isPrimaryArtifact">When set to true, the list includes Factors which use the specified Artifact as the 'primary' Artifact (each Factor is descibing the specified Artifact). When set to false, the 'related' Artifact is considered instead (each Factor uses the specified Artifact to describe other ones).</param>
+            <param name="isDefiningFilter">(Optional) When specified, the list will be filtered based on the IsDefining value.</param>
+            <param name="factorAssertionIdFilter">(Optional) When specified, the list will be filtered based on the FactorAssertion type.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsPrimaryartifactidFactors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeArtifactsPrimaryartifactidFactors.Post(System.UInt32,System.Boolean,System.Boolean,System.Nullable{System.UInt32},System.String)">
+            <summary>
+              <para>Add a new Factor. The Factor starts out empty (i.e. no Descriptors, Vectors, etc.) and is in an 'incomplete' state. Use various other API requests to fill and complete the Factor.</para>
+            </summary>
+            <param name="relatedArtifactId">Identifies the Related Artifact for the new Factor. The Related Artifact cannot be the same as the Primary Artifact.</param>
+            <param name="isDefining">The IsDefining value for the new Factor.</param>
+            <param name="isPublic">The IsPublic value for the new Factor.</param>
+            <param name="factorAssertionId">(Optional) Identifies the FactorAssertion for the new Factor. If not provided, the new Factor will receive an 'Undefined' FactorAssertion.</param>
+            <param name="note">(Optional) A sentence or short paragraph describing (in a human-readable format) the intended meaning of the new Factor. A descriptive note can be very helpful in a variety of scenarios. In most cases, the App responsible for creating this Factor should be able to automatically generate a note based on user input and the context of the current action. The note cannot exceed 256 characters.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridIdentors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridIdentors.Post(System.UInt32,System.String)">
+            <summary>
+              <para>Set the Identor for a Factor that you created.</para>
+            </summary>
+            <param name="identorTypeId">The IdentorType for the new Identor.</param>
+            <param name="value">The text-based Value for the new Identor.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridLocators">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridLocators.Post(System.UInt32,System.Double,System.Double,System.Double)">
+            <summary>
+              <para>Set the Locator for a Factor that you created.</para>
+            </summary>
+            <param name="locatorTypeId">The LocatorType for the new Locator.</param>
+            <param name="x">The X value for the new Locator.</param>
+            <param name="y">The Y value for the new Locator.</param>
+            <param name="z">The Z value for the new Locator.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridVectors">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ICoreMeFactorsFactoridVectors.Post(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.Int64)">
+            <summary>
+              <para>Set the Vector for a Factor that you created.</para>
+            </summary>
+            <param name="vectorTypeId">The VectorType for the new Vector.</param>
+            <param name="modifyWithArtifactId">The Artifact which provides meaning for the new Vector.</param>
+            <param name="vectorUnitPrefixId">The VectorUnitPrefix for the new Vector.</param>
+            <param name="vectorUnitId">The VectorUnit for the new Vector.</param>
+            <param name="value">The value for the new Vector. This value must be within the range specified by the VectorType. Decimal values are not supported; if additional precision is required, use a VectorUnitPrefix such as Milli or Micro.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsAdmcrowdidCrowdians">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsAdmcrowdidCrowdians.Admin">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsMemcrowdidCrowdians">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsMemcrowdidCrowdians.Member">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivatecrowdidCrowdians">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivatecrowdidCrowdians.Get">
+            <summary>
+              <para>Get a list of Crowdians from a private Crowd (also known as a 'Circle') that you own.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivcrowdidCrowdians">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivcrowdidCrowdians.Private">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsReqcrowdidCrowdians">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsReqcrowdidCrowdians.Request">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeUsersUseridRelation">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeUsersUseridRelation.Get(System.Int32)">
+            <summary>
+              <para>Get the Relation (if it exists) that connects you to the specified User.</para>
+            </summary>
+            <param name="incoming">If set to 1, the response only considers Relations which point to you (created by another User). Otherwise, the response only considers Relations you created.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeThreadsThreadidComments">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeThreadsThreadidComments.Post(System.String)">
+            <summary>
+              <para>Add a new TalkComment to a particular TalkThread.</para>
+            </summary>
+            <param name="text">The text to use for the new TalkComment, with length between 1 and 4096 characters. There are no character restrictions on the text string.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeArtifactsArtifactidThreads">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeArtifactsArtifactidThreads.Post(System.String,System.String)">
+            <summary>
+              <para>Add a new TalkThread to a particular Talk. This action also generates the first TalkComment for this TalkThread.</para>
+            </summary>
+            <param name="title">The title of the new TalkThread, with length between 4 and 64 characters. The title string is restricted to the 'Title' character set (includes alpha-numeric, space, and the following characters: !@#$%^&amp;*()-_+={}[]|;:'",.&lt;&gt;?/\~).</param>
+            <param name="text">The text to use for the first TalkComment of the new TalkThread, with length between 1 and 4096 characters. There are no character restrictions on the text string.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsAdmcrowdidCrowdiansAdmin">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsAdmcrowdidCrowdiansAdmin.Post(System.UInt32,System.UInt32,System.Single)">
+            <summary>
+              <para>Add a new Crowdian to a public Crowd. You must be the creator or an 'Admin' Crowdian for this Crowd.</para>
+            </summary>
+            <param name="userId">The User who will become the new Crowdian.</param>
+            <param name="crowdianTypeId">The CrowdianType for the new Crowdian. If this Crowd is *open*, you must use 'Member' or 'Admin' as the CrowdianType.</param>
+            <param name="weighting">A value from 0 to 1 (representing 0% to 100%) for the new Crowdian.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsMemcrowdidCrowdiansMember">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsMemcrowdidCrowdiansMember.Post">
+            <summary>
+              <para>Add yourself (to an open Crowd) as a 'Member' Crowdian.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivcrowdidCrowdiansPrivate">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsPrivcrowdidCrowdiansPrivate.Post(System.UInt32,System.Single)">
+            <summary>
+              <para>Add a new Crowdian to a private Crowd that you created.</para>
+            </summary>
+            <param name="userId">The User who will become the new Crowdian.</param>
+            <param name="weighting">A value from 0 to 1 (representing 0% to 100%) for the new Crowdian.</param>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsReqcrowdidCrowdiansRequest">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.ISocialMeCrowdsReqcrowdidCrowdiansRequest.Post">
+            <summary>
+              <para>Add yourself (to a closed Crowd) as a 'Request' Crowdian.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IFabObject">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabApp">
+            <summary>
+              <para>An App represents a project, application, or business which (in some way) connects human User users to the Fabric system. Apps are typically focused on a specific topic or type of content, and thus attracts users who have applicable interests. For example, an App might be a website focused on rating and describing classic books, with a target audience of college professors and other experts in that field. This is only an example -- an App's focus could be much broader or much more narrow.</para>
+              <para>Every item a User adds to the Fabric system is associated with a specific App via the Member object. Using the Member information, Fabric is able to determine which Apps are responsible for which data, enforce access rights, etc.</para>
+              <para>Upon App creation, Fabric generates one Tag, one Artifact, and one Talk. An App contains Keys for accessing these associated items.</para>
+              <para>An App gains access to a User's data and functionality via the OAuth process. Essentially, the App loads a website (on the Fabric server) where the User can log in and grant permission to the App. Upon success, the App receives an access code which it can send with each Fabric request to prove authorization.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabApp.AppArtifactKey">
+            <summary>Identifies the Artifact that was generated for this App.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabApp.Created">
+            <summary>The registration date/time of this App.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabApp.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabApp.Name">
+            <summary>The name of this App.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabAppKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabApp.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabKeyOfUint">
+            <summary>
+              <para>A Key which uniquely identifies an object. Each Key object has a type (such as FabUserKey) which corresponds with a data object (such as FabUser).</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabKeyOfUint.Id">
+            <summary>A numerical value which uniquely identifies this type of object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabKeyOfUint.Uri">
+            <summary>(Optional) The URI location for obtaining data about this Key's object.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabArtifact">
+            <summary>
+              <para>Artifacts are the central component of the Fabric system. An Artifact can represent any item, of any content type, from the real or digital world. The purpose of an Artifact is to provide a common place for users to attach their ratings (Attributes), descriptions (Tags), and associations (Connections) about a particular item.</para>
+              <para>The standard Artifact is URL-based, but other types are available. A Tag-based Artifact, for example, provides Artifact functionality for real-world items (such as 'Lion' or 'Pizza'). There are also types like Crowd- and User-based Artifacts; this allows users to attach ratings and descriptions to many objects in the Fabric system.</para>
+              <para>One or more 'Of{Type}' properties (determined by the ArtifactType) may be filled. In particular: if (and only if) OfTag is filled, then one of the following will also be filled: OfThing, OfLabel, OfApp, OfCrowd, or OfUser.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabArtifactCore">
+            <summary>
+              <para>Essential information about an Artifact.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifactCore.ArtifactTypeKey">
+            <summary>Identifies the type of this Artifact.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifactCore.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.Created">
+            <summary>The date/time that this Artifact was created.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.Creator">
+            <summary>Identifies the Member that created this Artifact.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.IsPrivate">
+            <summary></summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.IsTalkClosed">
+            <summary></summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.Name">
+            <summary>The name of this Artifact.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.OfApp">
+            <summary>(Optional) Identifies an App for an App-based Artifact.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.OfCrowd">
+            <summary>(Optional) Identifies a Crowd for a Crowd-based Artifact.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.OfLabel">
+            <summary>(Optional) Identifies an Label for an Label-based Artifact.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.OfRelation">
+            <summary>(Optional) Identifies a Relation for a Relation-based Artifact.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.OfTalkComment">
+            <summary>(Optional) Identifies a TalkComment for a TalkComment-based Artifact.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.OfThing">
+            <summary>(Optional) Identifies an Thing for an Thing-based Artifact.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.OfUrl">
+            <summary>(Optional) Identifies a Url for a Url-based Artifact. The 'Name' value for a Url-based Artifacts uses the associated 'FullUrl' value.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifact.OfUser">
+            <summary>(Optional) Identifies a User for a User-based Artifact.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabArtifactKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabArtifact.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabArtifactType">
+            <summary>
+              <para>Describes a particular type of Artifact. In the Fabric system, various objects are also treated as Artifacts, so the list of possible types includes: [Url, Tag, User, App, Crowd, Relation]</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifactType.Description">
+            <summary>A short paragraph describing the purpose and usage of this ArtifactType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifactType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabArtifactType.Name">
+            <summary>The display name for this ArtifactType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabArtifactTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabArtifactType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabCrowd">
+            <summary>
+              <para>A Crowd provides a method to put Users into groups. A Crowd can be public (anyone can see the Crowd and its Crowdians) or private (only the creator can access the Crowd). It can also be open (no invite required to become a Crowdian) or closed (invite required).</para>
+              <para>Crowds are useful on many levels. They allow like-minded Users to connect and communicate with each other. They allow data aggregation and analysis to be performed on a particular set of Users. Private crowds should be used as useral 'Circles' that can keep a User's friends and other relationships organized.</para>
+              <para>Upon public Crowd creation, Fabric generates one Artifact and one Talk. Upon private Crowd creation, Fabric only generates one Artifact. A Crowd contains Keys for accessing these associated items.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabCrowdCore">
+            <summary>
+              <para>Essential information about a Crowd.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdCore.Description">
+            <summary>A short paragraph describing the purpose and usage of this Crowd.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdCore.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdCore.Name">
+            <summary>The display name for this Crowd.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowd.Created">
+            <summary>The date/time this Crowd was created.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowd.Creator">
+            <summary>Identifies the Member that created this Crowd.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowd.CrowdArtifactKey">
+            <summary>Identifies the Artifact that was generated for this Crowd.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowd.IsInviteOnly">
+            <summary>Whether or not this Crowd requires an invite to join. Refer to invite-only Crowds as 'closed', and non-invite-only Crowds as 'open'.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowd.IsPrivate">
+            <summary>Whether or not this is a private Crowd.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabCrowdian">
+            <summary>
+              <para>A Crowdian is a User as a member of a Crowd. There are various types of Crowdians, and each Crowdian also receives a 'weighting' value. The higher the weighting, the more impact a Crowdian will have on aggregate Crowd calculations -- for example, when finding the average Vector value across all Crowdians in a particular Crowd.</para>
+              <para>There are various rules involed with Crowdian creation. The properties of the target Crowd and the User making the request are important factors. Fabric's API attempts to shield Apps from much of this complexity. More details are available in the 'Social.Me.Crowdians' Request documentation.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdian.CrowdianTypeKey">
+            <summary>Identifies the CrowdianType of this Crowdian.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdian.CrowdKey">
+            <summary>Identifies the Crowd to which this Crowdian belongs.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdian.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdian.Updated">
+            <summary>The latest date/time this Crowdian was updated.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdian.UserKey">
+            <summary>Identifies the User of this Crowdian.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdian.Weighting">
+            <summary>This numerical value (from 0 to 1) determines this Crowdian's relative impact on aggregate Crowd calculations. The default value is 0.5.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabCrowdianKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabCrowdian.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabCrowdianType">
+            <summary>
+              <para>Describes a particular type of Crowdian. Possible types include: [Request, Invite, Member, Admin, Owner]</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdianType.Description">
+            <summary>A short paragraph describing the purpose and usage of this CrowdianType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdianType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabCrowdianType.Name">
+            <summary>The display name for this CrowdianType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabCrowdianTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabCrowdianType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabCrowdKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabCrowd.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDescriptor">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDescriptor.DescriptorTypeKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDescriptor.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDescriptor.ModifyPrimaryWithArtifactKey">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDescriptor.ModifyRelatedWithArtifactKey">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDescriptor.ModifyTypeWithArtifactKey">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDescriptorKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabDescriptor.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDescriptorType">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDescriptorType.Description">
+            <summary>A short paragraph describing the purpose and usage of this DescriptorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDescriptorType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDescriptorType.Name">
+            <summary>The display name for this DescriptorType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDescriptorTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabDescriptorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDirector">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirector.DirectorTypeKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirector.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirector.PrimaryActionKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirector.RelatedActionKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDirectorAction">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirectorAction.Description">
+            <summary>A short paragraph describing the purpose and usage of this DirectorAction.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirectorAction.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirectorAction.Name">
+            <summary>The display name for this DirectorAction.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDirectorActionKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabDirectorAction.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDirectorKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabDirector.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDirectorType">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirectorType.Description">
+            <summary>A short paragraph describing the purpose and usage of this DirectorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirectorType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabDirectorType.Name">
+            <summary>The display name for this DirectorType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabDirectorTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabDirectorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabEmail">
+            <summary>
+              <para>Information related to a particular email address, mostly for internal use by Fabric. Email addresses are not shared publicly. Emails can belong to a User or an App, and must be verified using a special link that Fabric sends to the target address.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEmail.Address">
+            <summary>The email address.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEmail.Created">
+            <summary>The date/time this Email was created.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEmail.ForUser">
+            <summary>Indicates whether this Email belongs to a User or an App.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEmail.IsVerified">
+            <summary>Indicates whether this Email has been verified. The verification confirms to Fabric that the email address actually exists, and that the user has access the associated inbox.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEmail.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEmail.VerifiedDate">
+            <summary>(Optional) The date/time this Email was verified.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabEmailKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabEmail.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabError">
+            <summary>
+              <para>There are many cases where Fabric detects and handles errors. A FabError is returned in these scenarios. This will provide information about the error so it can be resolved or avoided in future calls.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabError.Description">
+            <summary>(Optional) Additional human-readable information about the error.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabError.Name">
+            <summary>The name of the error or fault that occurred.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabError.StatusCode">
+            <summary>The status code returned with the HTTP response. This code is duplicated here for convenience.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabEventor">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventor.DateTime">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventor.EventorPrecisionKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventor.EventorTypeKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventor.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabEventorKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabEventor.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabEventorPrecision">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventorPrecision.Description">
+            <summary>A short paragraph describing the purpose and usage of this EventorPrecision.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventorPrecision.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventorPrecision.Name">
+            <summary>The display name for this EventorPrecision.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabEventorPrecisionKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabEventorPrecision.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabEventorType">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventorType.Description">
+            <summary>A short paragraph describing the purpose and usage of this EventorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventorType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabEventorType.Name">
+            <summary>The display name for this EventorType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabEventorTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabEventorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabFactor">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.Created">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.Creator">
+            <summary>Identifies the Member that created this Factor.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.Deleted">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.DescriptorKey">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.DirectorKey">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.EventorKey">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.FactorAssertionKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.IdentorKey">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.IsComplete">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.IsDefining">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.IsPublic">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.LocatorKey">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.Note">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.PrimaryArtifactKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.RelatedArtifactKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactor.VectorKey">
+            <summary>(Optional) TODO</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabFactorAssertion">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactorAssertion.Description">
+            <summary>A short paragraph describing the purpose and usage of this FactorAssertion.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactorAssertion.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFactorAssertion.Name">
+            <summary>The display name for this FactorAssertion.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabFactorAssertionKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabFactorAssertion.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabFactorKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabFactor.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabFqlQuery">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFqlQuery.Created">
+            <summary>The date/time this FqlQuery was created.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFqlQuery.Creator">
+            <summary>Identifies the Member that created this FqlQuery.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFqlQuery.Description">
+            <summary>A short paragraph describing the purpose and usage of this FqlQuery.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFqlQuery.FqlQuery">
+            <summary>The FQL text for this FqlQuery.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFqlQuery.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFqlQuery.Name">
+            <summary>The display name for this FqlQuery.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabFqlQuery.Parameters">
+            <summary>A list of parameters for this FqlQuery. The string is in the format 'name|type;name|type', where 'type' is one of ['number', 'string', 'datetime'].</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabFqlQueryKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabFqlQuery.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabIdentor">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabIdentor.IdentorTypeKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabIdentor.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabIdentor.Value">
+            <summary>TODO</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabIdentorKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabIdentor.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabIdentorType">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabIdentorType.Description">
+            <summary>A short paragraph describing the purpose and usage of this IdentorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabIdentorType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabIdentorType.Name">
+            <summary>The display name for this IdentorType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabIdentorTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabIdentorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabLabel">
+            <summary>
+              <para>A Label is a word, phrase, or other text-based value used to describe and organize Artifacts. The Label provides a way to create a specific type of Tag -- it is not used directly.</para>
+              <para>Upon Label creation, Fabric generates one Tag. A Label contains a Key for accessing this associated item.</para>
+              <para>A Label is similar to a Thing, however, a Thing must always represent an actual item. A Label could be some value or code (say, 'A-1234') that might have a useful purpose for some User. Each new Thing generates a Tag and an Artifact, while a Label only generates a Tag.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLabel.Created">
+            <summary>The date/time that this Label was created.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLabel.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLabel.LabelArtifactKey">
+            <summary>Identifies the Artifact that was generated for this Label.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLabel.Name">
+            <summary>The name of this Label, which is unique relative to all other Labels.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabLabelKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabLabel.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabLocator">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocator.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocator.LocatorTypeKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocator.X">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocator.Y">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocator.Z">
+            <summary>TODO</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabLocatorKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabLocator.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabLocatorType">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocatorType.Description">
+            <summary>A short paragraph describing the purpose and usage of this LocatorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocatorType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocatorType.MaxX">
+            <summary>The maximum X value for this LocatorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocatorType.MaxY">
+            <summary>The maximum Y value for this LocatorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocatorType.MaxZ">
+            <summary>The maximum Z value for this LocatorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocatorType.MinX">
+            <summary>The minimum X value for this LocatorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocatorType.MinY">
+            <summary>The minimum Y value for this LocatorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocatorType.MinZ">
+            <summary>The minimum Z value for this LocatorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabLocatorType.Name">
+            <summary>The display name for this LocatorType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabLocatorTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabLocatorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabMember">
+            <summary>
+              <para>A combination of Key objects which identifies a particular Member, which connects a particular User to an App.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabMemberCore">
+            <summary>
+              <para>Essential information about a Membership.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabMemberCore.AppKey">
+            <summary>Identifies the App portion of this membership.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabMemberCore.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabMemberCore.MemberTypeKey">
+            <summary>Identifies a particular type of membership.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabMemberCore.UserKey">
+            <summary>Identifies the User portion of this membership.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabMember.Updated">
+            <summary>The date/time that this Membership was last updated.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabMemberKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabMember.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabMemberType">
+            <summary>
+              <para>Describes a particular type of Member. Possible types include: [None, Member, Staff, Admin, Owner]</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabMemberType.Description">
+            <summary>A short paragraph describing the purpose and usage of this MemberType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabMemberType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabMemberType.Name">
+            <summary>The display name for this MemberType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabMemberTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabMemberType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabOauthAccess">
+            <summary>
+              <para>This DTO provides an OAuth access token and other closely-related information.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthAccess.access_token">
+            <summary>This value is associated with a variety of OAuth information, and is specific to one App and one (or zero) User(s). Include this value with each Fabric API request.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthAccess.expires_in">
+            <summary>The number of seconds until the access token expires.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthAccess.refresh_token">
+            <summary>(Optional) Use this value to refresh an OAuth session which has an expired access token. App-only access tokens do not include a refresh token; the App should simply request a new access token.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthAccess.token_type">
+            <summary>The type of access token.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabOauthError">
+            <summary>
+              <para>To comply with the OAuth 2.0 specification, Fabric's OAuth requests return a FabOauthError (instead of the usual FabError) when errors occur.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthError.error">
+            <summary>An error code as defined by the OAuth 2.0 specification.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthError.error_description">
+            <summary>Text which provides specific details about the error. A float error code may have one or more possible error descriptions.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabOauthLogin">
+            <summary>
+              <para>This DTO is unique -- the API never returns this object directly. Instead, the properties shown below are included as query-string parameters for a redirect URI. This URI is provided by an App, and the App is responsible for accepting (and reacting to) the incoming redirect.</para>
+              <para>This redirect is used in one specific scenario: the OAuth entry process. After the user completes this process, Fabric performs a redirect with success or failure information.  The success redirect includes the 'code' and 'state' parameters. The failure redirect includes the 'error', 'error_description', and 'state' parameters.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthLogin.code">
+            <summary>(Optional) This value (called the 'authorization code') is used to generate a new OAuth access token. Each code is valid for a float use. For security purposes, each code expires 120 seconds after creation.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthLogin.error">
+            <summary>(Optional) An error code as defined by the OAuth 2.0 specification.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthLogin.error_description">
+            <summary>(Optional) Text which provides specific details about the error. A float error code may have one or more possible error descriptions. For use in the redirect URI, this text replaces each space character with a '+' character.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthLogin.state">
+            <summary>(Optional) Compare this value to the 'state' value included in the App's original request. For security reasons, the App should reject the response if these two values are not equal.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabOauthLogout">
+            <summary>
+              <para>This DTO reports the results of an OAuth Logout request.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthLogout.access_token">
+            <summary>The access token targeted for logout. If logout was successful, this access token has been invalidated and cannot be used again.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabOauthLogout.success">
+            <summary>If logout was successful, this value will equal 1.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabRelation">
+            <summary>
+              <para>A Relation is a directional connection between two Users. It is owned by the 'From' User, who describes their relationship with the 'To' User using the most relevant RelationType.</para>
+              <para>Upon Relation creation, Fabric generates one private Artifact and one private Talk. A Relation contains Keys for accessing these associated items. The private Artifact allows the Relation's owner to further rate and describe this Relation. The private Talk provides a method of private messaging between the Relation's two Users.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabRelationCore">
+            <summary>
+              <para>Essential information about a Relation.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelationCore.FromUserKey">
+            <summary>Identifies the 'A' Artifact in this directional User relationship.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelationCore.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelationCore.RelationTypeKey">
+            <summary>Identifies the RelationType selected by the 'From' User.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelationCore.ToUserKey">
+            <summary>Identifies the 'B' Artifact in this directional A -> B relationship.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelation.Note">
+            <summary>(Optional) A short comment describing this Relation. This text must be between 0 and 256 characters in length.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelation.RelationArtifactKey">
+            <summary>Identifies the Artifact that was generated for this Relation.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelation.Updated">
+            <summary>The date/time that this Relation was last updated.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabRelationKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabRelation.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabRelationType">
+            <summary>
+              <para>Describes a particular type of Relation. Possible types include: [None, Met, Acquaintance, Friend, Parent, Sibling, Child, etc.]</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelationType.Description">
+            <summary>A short paragraph describing the purpose and usage of this RelationType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelationType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabRelationType.Name">
+            <summary>The display name for this RelationType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabRelationTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabRelationType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabTalkComment">
+            <summary>
+              <para>A TalkComment is text from a particular User that belongs to the discussion in a TalkThread. A TalkComment can be edited and deleted by its author.</para>
+              <para>All Talks (and their TalkComments) are publicly accessible, however, Crowd-based Talks require Crowd membership to add new TalkComments.</para>
+              <para>Fabric generates a new Artifact with each new TalkComment. This allows users to rate and describe each TalkComment, which can help identify the most helpful comments, filter out obscene comments, score a comment's objectivity, etc.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.CommentArtifactKey">
+            <summary>Identifies the Artifact that was generated for this TalkComment.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.EditCount">
+            <summary>The number of times this TalkComment has been edited.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.IsDeleted">
+            <summary>The text of this TalkComment will be an empty string when IsDeleted is true. The App displaying the TalkComment can omit deleted ones, or (preferred) display placeholder text (such as, 'This comment was deleted').</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.IsPost">
+            <summary>Indicates whether this TalkComment is the first one in the TalkThread.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.TalkThreadKey">
+            <summary>Identifies the TalkThread that owns this this TalkComment.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.Text">
+            <summary>The text of this TalkComment.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.Updated">
+            <summary>The date/time that this TalkComment was most recently updated.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.UserKey">
+            <summary>Identifies the User who created this TalkComment.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkComment.UserUsername">
+            <summary>The username of the User who created this TalkComment.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabTalkCommentKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabTalkComment.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabTalkThread">
+            <summary>
+              <para>A TalkThread contains one or more TalkComments, which (ideally) form a discussion focused on some particular topic. When creating a TalkThread, a User provides both a TalkThread title and text which becomes the first TalkComment.</para>
+              <para>All Talks (and their TalkThreads) are publicly accessible, however, Crowd-based Talks require Crowd membership to add new TalkThreads.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkThread.ArtifactKey">
+            <summary>Identifies the Artifact that owns this this TalkThread.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkThread.CommentCount">
+            <summary>The total number of comments in this TalkThread.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkThread.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkThread.Title">
+            <summary>The title of this TalkThread.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkThread.Updated">
+            <summary>The date/time of the most recently updated TalkComment in this TalkThread.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkThread.UserKey">
+            <summary>Identifies the User who created this TalkThread.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabTalkThread.UserUsername">
+            <summary>The username of the User who created this TalkThread.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabTalkThreadKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabTalkThread.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabThing">
+            <summary>
+              <para>A Thing represents something -- real, virtual, or conceptual -- which an App or User may want to rate, describe, connect, etc. There are two distinct Thing designations: Class and Instance.</para>
+              <para>A Class represents a particular group, type, set, or category of items. Each Class must uniquely identifiable (via name and disambiguation) amonst all other Classes. In general, a valid Class should have at least two unique Things (Classes or Instances) that 'belong' to it. When applying 'Is A' Descriptors to any given Artifact, only Class-based Tags may be used.</para>
+              <para>An Instance represents a singular, unique item. It may or may not have a specific name, however, the name is not required to be unique. Instead, the Instance owner should apply Descriptors, Vectors, etc.[*1] to make the Instance as specific and meaningful as possible. Each valid Instance should belong (via the 'Is A' Descriptor) to at least one Class. When applying an 'Is A' Descriptor for a new Instance, use the most specific Class available.</para>
+              <para>Upon Thing creation, Fabric generates one Tag, one Artifact, and one Talk. Each Thing contains Keys for accessing these associated items.</para>
+              <para>An example of Class/Instance usage: Ellie is building a Fabric App for dog lovers. In this example, Fabric does not have any animal-related Classes for Ellie to use. She creates new Clasess called 'Animal', 'Mammal', and 'Canine', and then uses the the 'Is A' Descriptor[*1] to describe/relate them (Mammal 'Is A' Animal, etc.). She continues adding classes for each dog grouping (like 'Working Dog') and breed (like 'Great Dane'), adding relevant Descriptors along the way. She receives an error from Fabric when trying to add a Class for 'Boxer', because this name is already in use. She adds a 'Dog Breed' disambiguation value to resolve this conflict.</para>
+              <para>Ellie is satisfied with the new Classes, and wants to add her dog, Gulliver. She creates a new Instance, provides the (optional) name 'Gulliver', and adds some information to make the Instance as unique as possible. Ellie gives Gulliver an 'Is A' Descriptor of 'Lhasa Apso', an 'Owned By' Descriptor of her own Fabric User, and finally, a 'Birth Date' Vector.</para>
+              <para>Another example of Instance usage: Zach built a Fabric App that allows users to rate restaurants and individual meals. He created Classes for restarauant chains and meal types. He also created Instances for specific restaurants. When users want to rate a particular meal, Zach's App asks them to specify the restaurant, the day/time the meal was served, and the meal type. Behind the scenes, the App uses this information (plus a 'Consumed By' Descriptor using the user's Fabric User) to construct a new Instance. Because Zach includes the day/time served, one User could eat the same meal (at the same restaurant) every week, and create a unique Instance each time.  This App's Instances have no defined names, however, their associated information makes them each unique, meaningful, and relevant within Fabric.</para>
+              <para>[*1] Things receive Factors (like Descriptor and Vector) indirectly -- the Factor must be applied to the Thing's associated Artifact.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabThing.Created">
+            <summary>The date/time that this Thing was created.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabThing.Creator">
+            <summary>Identifies the Member that created this Thing.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabThing.Disambiguation">
+            <summary>(Optional) The disambiguation text for this Thing. This allows two Things with the same name (but different meanings) to exist.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabThing.IsClass">
+            <summary>Specifies this Thing's designation as a Class or Instance.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabThing.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabThing.Name">
+            <summary>The name of this Thing.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabThing.Note">
+            <summary>(Optional) Explains (in words) the exact intention or purpose of this Thing. A note is not a substitute for applying Descriptors, Vectors, etc. Cannot exceed 256 characters in length.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabThing.ThingArtifactKey">
+            <summary>Identifies the Artifact that was generated for this Thing.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabThingKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabThing.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabUrl">
+            <summary>
+              <para>A Url is a link to some peice of content. The Url provides a way to create a specific type of Artifact -- it is not used directly.</para>
+              <para>Upon Url creation, Fabric generates one Artifact and one Talk. A Url contains Keys for accessing these associated items.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUrl.Created">
+            <summary>The date/time that this Url was created.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUrl.Creator">
+            <summary>Identifies the Member that created this Url.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUrl.FullUrl">
+            <summary>(Optional) The URL for a URL-based Artifact. The URL must be valid, include the protocol text (such as 'http://'), and be no more than 450 characters in length.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUrl.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUrl.Name">
+            <summary>The name of this Url.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUrl.UrlArtifactKey">
+            <summary>Identifies the Artifact that was generated for this Url.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabUrlKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabUrl.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabUser">
+            <summary>
+              <para>A User of the Fabric system. Each User has minimal data requirements, because further information about the user can be added via Tags, Attributes, etc.</para>
+              <para>Upon User creation, Fabric generates one Tag, one Artifact, and one Talk. A User contains Keys for accessing these associated items.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUser.Created">
+            <summary>The registration date/time of this User.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUser.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUser.Name">
+            <summary>A public, unique username. Must be between 4 and 24 characters in length.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabUser.UserArtifactKey">
+            <summary>Identifies the Artifact that was generated for this User.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabUserKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabUser.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVector">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVector.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVector.ModifyWithArtifactKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVector.Value">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVector.VectorTypeKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVector.VectorUnitKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVector.VectorUnitPrefixKey">
+            <summary>TODO</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabVector.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorRange">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorRange.Description">
+            <summary>A short paragraph describing the purpose and usage of this VectorRange.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorRange.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorRange.Levels">
+            <summary>The VectorRangeLevels for this VectorRange.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorRange.Name">
+            <summary>The display name for this VectorRange.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorRangeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabVectorRange.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorRangeLevel">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorRangeLevel.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorRangeLevel.Name">
+            <summary>The display name for this VectorRangeLevel.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorRangeLevel.Position">
+            <summary>A value from 0 to 1 which defines the position of this VectorRangeLevel.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorRangeLevel.VectorRangeKey">
+            <summary>(Optional) Identifies the VectorRange that uses VectorRangeLevel.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorRangeLevelKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabVectorRangeLevel.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorType">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorType.Description">
+            <summary>A short paragraph describing the purpose and usage of this VectorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorType.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorType.Max">
+            <summary>A short paragraph describing the purpose and usage of this VectorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorType.Min">
+            <summary>A short paragraph describing the purpose and usage of this VectorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorType.Name">
+            <summary>The display name for this VectorType.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorType.VectorRangeKey">
+            <summary>Identifies the VectorRange for this VectorType.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorTypeKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabVectorType.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorUnit">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorUnit.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorUnit.Name">
+            <summary>The display name for this VectorUnit.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorUnit.Symbol">
+            <summary>An abbreviation for this VectorUnit.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorUnitKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabVectorUnit.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorUnitPrefix">
+            <summary>
+              <para>TODO</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorUnitPrefix.Amount">
+            <summary>The multiplier value represented by this VectorUnitPrefix.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorUnitPrefix.Key">
+            <summary>Identifies this object.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorUnitPrefix.Name">
+            <summary>The display name for this VectorUnitPrefix.</summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVectorUnitPrefix.Symbol">
+            <summary>An abbreviation for this VectorUnitPrefix.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVectorUnitPrefixKey">
+            <summary>
+              <para>A Key which uniquely identifies a FabVectorUnitPrefix.</para>
+            </summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabVersion">
+            <summary>
+              <para>Provides version information for the Fabric API.</para>
+            </summary>
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabVersion.version">
+            <summary>The version string uses 'Major.Minor.Build' format.</summary>
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.Logging.IFabricLog">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Logging.IFabricLog.Info(Fabric.Clients.CSharp.Fluent.IFabricClientConfig,System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Logging.IFabricLog.Debug(Fabric.Clients.CSharp.Fluent.IFabricClientConfig,System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Logging.IFabricLog.Error(Fabric.Clients.CSharp.Fluent.IFabricClientConfig,System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Logging.IFabricLog.Fatal(Fabric.Clients.CSharp.Fluent.IFabricClientConfig,System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Logging.IFabricLog.Warn(Fabric.Clients.CSharp.Fluent.IFabricClientConfig,System.String)">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.Ui.FabricDataGrid">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Ui.FabricDataGrid.#ctor(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Ui.FabricDataGrid.#ctor(System.Object)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Ui.FabricDataGrid.buildTableHtml(System.Collections.Generic.IEnumerable{System.Object},System.Int32)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Ui.FabricDataGrid.getHtml">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabricClientConfig">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.IFabricClientConfig">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.GetSessionContainer">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.LogInfo(System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.LogDebug(System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.LogError(System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.LogFatal(System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.LogWarn(System.String)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.ConfigKey">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.ApiPath">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.AppId">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.AppSecret">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.AppDataProvPersonId">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.AppOAuthRedirectUri">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.IFabricClientConfig.Logger">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClientConfig.#ctor(System.String,System.String,System.Int32,System.String,System.Int32,System.String,Fabric.Clients.CSharp.Fluent.FabricClientConfig.SessionContainerProvider)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClientConfig.GetSessionContainer">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClientConfig.LogInfo(System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClientConfig.LogDebug(System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClientConfig.LogError(System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClientConfig.LogFatal(System.String)">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.FabricClientConfig.LogWarn(System.String)">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClientConfig.ConfigKey">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClientConfig.ApiPath">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClientConfig.AppId">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClientConfig.AppSecret">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClientConfig.AppDataProvPersonId">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClientConfig.AppOAuthRedirectUri">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.FabricClientConfig.Logger">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.FabricClientConfig.SessionContainerProvider">
+            <summary />
+        </member>
+        <member name="T:Fabric.Clients.CSharp.Fluent.Session.IFabricAppDataProvSession">
+            <summary />
+        </member>
+        <member name="M:Fabric.Clients.CSharp.Fluent.Session.IFabricAppDataProvSession.RequestAuthentication">
+            <summary />
+        </member>
+        <member name="P:Fabric.Clients.CSharp.Fluent.Session.IFabricAppDataProvSession.AppSess">
+            <summary />
+        </member>
+    </members>
+</doc>
