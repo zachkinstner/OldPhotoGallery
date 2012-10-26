@@ -19,7 +19,11 @@
 		<div class="container topMenu">
 			<div class="row">
 				<div class="sixcol title">
-					@Html.ActionLink(homeLink)
+					<img src="@Url.Content("~/Content/images/logo48.png")"
+						 style="position: absolute; top:-8px; margin-left: -7px;" />
+					<span style="margin-left:44px;">
+						@Html.ActionLink(homeLink)
+					</span>
 				</div>
 				<div class="sixcol last items">
 					<a href="#">menu</a> |
@@ -29,5 +33,15 @@
 			</div>
 		</div>
 		@RenderBody()
+		<div class="container footer">
+			<div class="row">
+				<div class="twelvecol">
+					<p>
+						All photos and content © Zach Kinstner, 2010 - @DateTime.Now.Year.
+						All rights reserved.
+					</p>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

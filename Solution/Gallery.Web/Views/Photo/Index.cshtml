@@ -1,21 +1,13 @@
 ﻿@model PhotoIndexModel
 @{
 	WebPhoto p = Model.Photo;
+	
 	var prevLink = new ActionLinkModel<PhotoController>(x => x.Index(Model.PrevPhotoId), "Previous");
 	var nextLink = new ActionLinkModel<PhotoController>(x => x.Index(Model.NextPhotoId), "Next");
 	var albumLink = new ActionLinkModel<PhotosController>(x => x.Albums(p.AlbumId), p.AlbumName);
 	
-	string exposure = (p.ExifExposureTime >= 1 ? p.ExifExposureTime+"" :
-		"1/"+Math.Round(1/p.ExifExposureTime));
-	/*string tagsLbl = "";
-
-	for ( int ti = 0 ; ti < Model.Tags.Count ; ++ti ) {
-		Tag tag = Model.Tags[ti];
-		tagsLbl += (ti > 0 ? ", " : "")+
-			"<a href=\""+Url.Content("~/Photos/Tag/"+tag.Id)+"\">"+tag.Name+"</a>";
-	}
-
-	if ( tagsLbl == "" ) { tagsLbl = "<em>None</em>"; }*/
+	string exposure = (p.ExifExposureTime >= 1 ? 
+		p.ExifExposureTime+"" : "1/"+Math.Round(1/p.ExifExposureTime));
 }
 <div class="container">
 	<div class="row">
@@ -25,13 +17,22 @@
 </div>
 <div class="container">
 	<div class="row">
+		
 		<div class="ninecol mainPhotoCol">
 			<div class="hold">
-				<img id="mainPhoto" src="@Model.Photo.ImageUrl" alt="@Model.Photo.ImgName" />
+				@if ( Model.NextPhotoId == -1 ) {
+					<img id="mainPhoto" src="@p.ImageUrl" alt="@p.ImgName" />
+				}
+				else {
+					<img id="mainPhoto" src="@p.ImageUrl" alt="@p.ImgName" style="cursor: pointer;"
+						onclick="document.location.href = '@Html.ActionLinkUrl(nextLink)';" />
+				}
 			</div>
 		</div>
-		<div class="threecol last">
-			<div style="padding-left:10px;">
+
+		<div class="threecol last mainPhotoDetail">
+			
+			<div class="section">
 				<p>
 					<b>Photo Set</b><br />
 					Viewing photo @(Model.PhotoIndex+1) of @Model.PhotoCount<br/>
@@ -42,30 +43,37 @@
 						<span>|</span>
 						if ( Model.NextPhotoId == -1 ) { <span>Next</span> }
 						else { @Html.ActionLink(nextLink); }
-						<br/>
 					}
-					
-					<br />
+				</p>
+			</div>
+
+			<div class="section">
+				<p>
 					<b>From Album</b><br />
 					@Html.ActionLink(albumLink)<br/>
+				</p>
+			</div>
 
-					<br/>
+			<div class="section">
+				<p>
 					<b>Date Taken</b><br />
 					@p.ExifDtOrig.ToString("dddd, MMMM d, yyyy @ h:mm:ss tt EST")<br />
 					<br />
 					
-					@if ( Model.Photo.Favorite > 0 ) {
+					@if ( p.Favorite > 0 ) {
 						<span>This photo is a Favorite.</span><br /><br />
 					}
 					
 					<b>Details</b><br />
 					Focal Length: @(p.ExifFocalLength)mm<br />
 					Exposure: @exposure sec<br />
-					F-Stop: f/@p.ExifFNumber<br />
+					F-Stop: <em>f</em>/@p.ExifFNumber<br />
 					ISO Speed: @p.ExifIsoSpeed<br />
 					Filename: @p.ImgName<br />
 				</p>
 			</div>
+
 		</div>
+
 	</div>
 </div>

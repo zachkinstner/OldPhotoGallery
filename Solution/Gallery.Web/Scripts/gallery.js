@@ -118,5 +118,5 @@ function resizeMainPhoto() {
 		margL = (parW-$(main).width())/2;
 	}
 
-	$(main).css("padding", margT+"px 0 0 "+margL+"px");
+	$(main).css("padding", margT+"px "+margL+"px "+margT+"px "+margL+"px");
 }

@@ -59,7 +59,17 @@ div.mainPhotoCol {
 
 div.mainPhotoCol div.hold {
 	background-color: #283038;
-	max-width: 1024px;
+	max-width: 1044px;
+	padding: 10px;
+}
+
+div.mainPhotoDetail {
+}
+
+div.mainPhotoDetail div.section {
+	padding: 10px;
+	background-color: #283038;
+	margin-bottom: 2px;
 }
 
 /* --- */
@@ -79,12 +89,31 @@ div.topMenu div.title {
 	font-weight: bold;
 }
 
+div.topMenu div.title a {
+	color: #55aaff;
+}
+
 div.topMenu div.items {
 	text-align: right;
 	font-size: 1.4em;
 	line-height: 1.4em;
 	color: #808890;
 }
+
+/* --- */
+
+div.footer {
+	padding-top: 5px;
+	margin-top: 40px;
+	border-top: 1px solid #404850;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+div.footer p {
+	color: #606870;
+}
+
 
 /* --- */
 
