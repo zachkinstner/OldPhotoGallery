@@ -38,6 +38,9 @@
   <ItemGroup>
     <Compile Include="Application\PhotoCollection.cs" />
     <Compile Include="Application\GalleryWebSession.cs" />
+    <Content Include="Content\images\logo16.png" />
+    <Content Include="Content\images\logo128.png" />
+    <Content Include="Content\images\logo48.png" />
     <Content Include="Content\images\logo32.png" />
     <Content Include="Content\styles\1140.css" />
     <Content Include="Content\styles\ie.css" />
