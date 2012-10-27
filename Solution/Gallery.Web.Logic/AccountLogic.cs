@@ -1,5 +1,7 @@
 ﻿using Fabric.AppBase.CSharp.Standard.Web.Logic;
 using Fabric.Clients.CSharp.Fluent;
+using Gallery.Domain;
+using NHibernate;
 
 namespace Gallery.Web.Logic {
 
@@ -17,7 +19,17 @@ namespace Gallery.Web.Logic {
 		////////////////////////////////////////////////////////////////////////////////////////////////
 		/*--------------------------------------------------------------------------------------------*/
 		public int? AddAlbum(string pTitle) {
-			return 62;
+			Album album = null;
+
+			AddTxFunc(delegate(ISession pSession) {
+				album = new Album();
+				album.Title = pTitle;
+				album.LocalPath = "";
+				pSession.Save(album);
+			});
+
+			ExecuteTxFuncs();
+			return album.Id;
 		}
 
 	}

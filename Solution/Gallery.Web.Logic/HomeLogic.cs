@@ -39,7 +39,7 @@ namespace Gallery.Web.Logic {
 			WebAlbum dto = null;
 
 			return pSession.QueryOver<Album>(() => albAlias)
-				.JoinAlias(a => a.Photos, () => phoAlias, JoinType.LeftOuterJoin)
+				.JoinAlias(a => a.Photos, () => phoAlias, JoinType.InnerJoin)
 				.SelectList(list => list
 					.SelectGroup(a => a.Id).WithAlias(() => dto.AlbumId)
 					.SelectMin(a => a.Title).WithAlias(() => dto.Title)
