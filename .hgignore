@@ -5,6 +5,6 @@ Solution/_ReSharper.Gallery
 */bin/*
 */obj/*
 VisualizeHg.bat
-Fabric.*.log
-Fabric.*.log.*
 Solution/Gallery.Web/NHibernate.config
+_Publish/*
+Gallery.*.log*

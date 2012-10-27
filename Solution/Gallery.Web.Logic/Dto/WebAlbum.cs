@@ -29,6 +29,17 @@ namespace Gallery.Web.Logic.Dto {
 			}
 		}
 
+
+		////////////////////////////////////////////////////////////////////////////////////////////////
+		/*--------------------------------------------------------------------------------------------*/
+		public string DateRangeString {
+			get {
+				string start = Convert.ToDateTime(StartDate).ToString("MMM d");
+				string end = Convert.ToDateTime(EndDate).ToString("MMM d, yyyy");
+				return start+" - "+end;
+			}
+		}
+
 	}
 
 }

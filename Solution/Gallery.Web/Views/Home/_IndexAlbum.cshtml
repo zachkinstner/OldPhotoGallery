@@ -3,8 +3,6 @@
 	string numPhotoText = Model.NumPhotos+" photo"+(Model.NumPhotos==1?"":"s");
 	int favPerc = (int)Math.Round((Model.NumFavs/(float)Model.NumPhotos)*100);
 	string numFavText = favPerc+"% favorites";
-	string startDate = Convert.ToDateTime(Model.StartDate).ToString("MMM d");
-	string endDate = Convert.ToDateTime(Model.EndDate).ToString("MMM d, yyyy");
 
 	var link = new ActionLinkModel<PhotosController>(x => x.Albums(Model.AlbumId), Model.Title);
 }
@@ -12,7 +10,7 @@
 <p class="albumSummary">
 	@Html.ActionLink(link, new { @class="title" })
 	<br />
-	@startDate - @endDate<br />
+	@Model.DateRangeString<br />
 	@numPhotoText<br />
 	@numFavText
 </p>

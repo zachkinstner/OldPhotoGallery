@@ -1,4 +1,19 @@
 ﻿@model PhotosAlbumModel
+@{
+	int n = Model.Album.NumPhotos;
+	string numPhotoText = n+" photo"+(n==1?"":"s");
+}
+<div class="container">
+	<div class="row">
+		<div class="twelvecol" style="text-align: center;">
+			<h3>@Model.Album.Title</h3>
+			<p>
+				@numPhotoText / @Model.Album.DateRangeString<br/>
+				<br/>
+			</p>
+		</div>
+	</div>
+</div>
 <div class="container">
 	@for ( int i = 0 ; i < Model.Photos.Count ; ++i ) {
 		bool first = (i%12 == 0);

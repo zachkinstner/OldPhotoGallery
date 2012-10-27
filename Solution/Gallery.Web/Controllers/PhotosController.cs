@@ -9,7 +9,7 @@ namespace Gallery.Web.Controllers {
 	/*================================================================================================*/
 	public class PhotosController : GalleryMasterController {
 
-		private PhotosLogic vPhotos;
+		private readonly PhotosLogic vPhotos;
 
 
 		////////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,10 +30,10 @@ namespace Gallery.Web.Controllers {
 			if ( m.Album == null ) { return Show404(); }
 
 			List<int> phoIds = vPhotos.GetAlbumPhotoIds(m.Album.AlbumId);
-			GallerySession.ActivePhotos.Update(phoIds, "Album: "+m.Album.Title, null);
+			GallerySession.ActivePhotos.Update(phoIds, m.Album.Title, null);
 
 			m.Photos = vPhotos.GetPhotos(phoIds);
-			return View(m);
+			return View("Album", m);
 		}
 
 	}

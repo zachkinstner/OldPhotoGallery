@@ -16,19 +16,17 @@ namespace Gallery.Web {
 	/*================================================================================================*/
 	public class GalleryMvcApplication : HttpApplication {
 
-		private Global vGlobal;
-		private FabricClientConfig vFabCfg;
+		private static Global AppGlobal;
+		private static FabricClientConfig AppFabCfg;
 
 
 		////////////////////////////////////////////////////////////////////////////////////////////////
 		/*--------------------------------------------------------------------------------------------*/
 		protected void Application_Start() {
 			BuildGlobal();
-			vGlobal.OnAppStart();
+			AppGlobal.OnAppStart();
 
-			ControllerBuilder.Current.SetControllerFactory(vGlobal.BuildWindsorControllerFactory());
-
-			////
+			ControllerBuilder.Current.SetControllerFactory(AppGlobal.BuildWindsorControllerFactory());
 			
 			AreaRegistration.RegisterAllAreas();
 
@@ -38,7 +36,7 @@ namespace Gallery.Web {
 
 		/*--------------------------------------------------------------------------------------------*/
 		protected void Application_End() {
-			vGlobal.OnAppEnd();
+			AppGlobal.OnAppEnd();
 		}
 
 		/*--------------------------------------------------------------------------------------------*/
@@ -48,19 +46,28 @@ namespace Gallery.Web {
 			Log.Error("Application_Error: "+ex+" // "+rtl);
 		}
 
+		/*--------------------------------------------------------------------------------------------*/
+		public override void Init() {
+			base.Init();
+			AppGlobal.OnInit(this);
+		}
+
+		/*--------------------------------------------------------------------------------------------*/
+		protected void Application_BeginRequest(object pSender, EventArgs pEvt) {
+			AppGlobal.OnAppBeginRequest();
+		}
+
 
 		////////////////////////////////////////////////////////////////////////////////////////////////
 		/*--------------------------------------------------------------------------------------------*/
 		private void BuildGlobal() {
-			base.Init();
-
 			#if DEBUG
 			const string domain = "http://localhost:49316";
 			#else
 			const string domain = "http://zachkinstner.com";
 			#endif
 
-			vFabCfg = new FabricClientConfig(
+			AppFabCfg = new FabricClientConfig(
 				"GalCfg",
 				"http://inTheFabric.com/api",
 				2,
@@ -70,12 +77,11 @@ namespace Gallery.Web {
 				FabricSessionContainerProvider
 			);
 
-			vGlobal = new Global(
-				this,
+			AppGlobal = new Global(
 				new[] { Server.MapPath("~/bin/Gallery.Infrastructure.dll") },
 				new AutoPersistenceModelGenerator().Generate(GlobalLogic.GetDomainAssembly()),
 				Server.MapPath("~/NHibernate.config"),
-				vFabCfg,
+				AppFabCfg,
 				(() => new GalleryWebSession()),
 				Assembly.GetAssembly(typeof(GalleryWebSession)),
 				Assembly.GetAssembly(typeof(HomeLogic))

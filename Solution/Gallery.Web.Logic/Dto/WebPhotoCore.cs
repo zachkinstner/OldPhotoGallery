@@ -32,17 +32,13 @@ namespace Gallery.Web.Logic.Dto {
 
 		////////////////////////////////////////////////////////////////////////////////////////////////
 		/*--------------------------------------------------------------------------------------------*/
-		public string ImageUrl {
-			get {
-				return GalleryUtil.BuildPhotoUrl(AlbumId, PhotoId, GalleryUtil.PhotoSize.Med);
-			}
-		}
+		public string FullUrl { get { return GetUrl(GalleryUtil.PhotoSize.Full); } }
+		public string ImageUrl { get { return GetUrl(GalleryUtil.PhotoSize.Med); } }
+		public string ThumbUrl { get { return GetUrl(GalleryUtil.PhotoSize.Sm); } }
 
 		/*--------------------------------------------------------------------------------------------*/
-		public string ThumbUrl {
-			get {
-				return GalleryUtil.BuildPhotoUrl(AlbumId, PhotoId, GalleryUtil.PhotoSize.Sm);
-			}
+		private string GetUrl(GalleryUtil.PhotoSize pSize) {
+			return GalleryUtil.BuildImageUrl(AlbumId, PhotoId, pSize);
 		}
 
 	}

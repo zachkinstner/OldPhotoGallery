@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Text;
-using Gallery.Domain;
 
 namespace Gallery.Web.Logic.Util {
 	
@@ -19,14 +18,13 @@ namespace Gallery.Web.Logic.Util {
 		
 		////////////////////////////////////////////////////////////////////////////////////////////////
 		/*--------------------------------------------------------------------------------------------*/
-		public static string BuildPhotoUrl(Photo pPhoto, PhotoSize pSize) {
-			return BuildPhotoUrl(pPhoto.Album.Id, pPhoto.Id, pSize);
+		public static string BuildImageUrl(int pAlbumId, int pPhotoId, PhotoSize pSize) {
+			return "http://www.zachkinstner.com/gallery"+BuildPhotoPath(pAlbumId, pPhotoId, pSize);
 		}
 
 		/*--------------------------------------------------------------------------------------------*/
-		public static string BuildPhotoUrl(int pAlbumId, int pPhotoId, PhotoSize pSize) {
-			return "http://www.zachkinstner.com/gallery/uploads/albums/"+
-				pAlbumId+"/"+pPhotoId+pSize+".jpg";
+		public static string BuildPhotoPath(int pAlbumId, int pPhotoId, PhotoSize pSize) {
+			return "/uploads/albums/"+pAlbumId+"/"+pPhotoId+pSize+".jpg";
 		}
 		
 		

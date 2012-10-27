@@ -11,12 +11,6 @@
 }
 <div class="container">
 	<div class="row">
-		<div class="ninecol" style="text-align: center;">
-		</div>
-	</div>
-</div>
-<div class="container">
-	<div class="row">
 		
 		<div class="ninecol mainPhotoCol">
 			<div class="hold">
@@ -53,6 +47,14 @@
 					@Html.ActionLink(albumLink)<br/>
 				</p>
 			</div>
+
+			@if ( Model.FullSizeExists ) {
+				<div class="section">
+					<p>
+						<a href="@p.FullUrl">Download Full Size</a>
+					</p>
+				</div>
+			}
 
 			<div class="section">
 				<p>
