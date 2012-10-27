@@ -1,6 +1,8 @@
-﻿@model ModelBase
+﻿@model GalleryModel	
 @{
 	var homeLink = new ActionLinkModel<HomeController>(x => x.Index(), "Kinstner Photo Gallery");
+	var acctLink = new ActionLinkModel<AccountController>(x => x.Index(), "account");
+	var fabSess = Model.GallerySession.Fabric.PersonSession;
 }
 <html>
 <head>
@@ -12,20 +14,25 @@
 	<link rel="stylesheet" href="@Url.Content("~/Content/styles/1140.css")" type="text/css" media="screen" />
 	<link rel="stylesheet" href="@Url.Content("~/Content/styles/gallery.css")" type="text/css" media="screen" />
 	<script type="text/javascript" src="@Url.Content("~/Scripts/css3-mediaqueries.js")"></script>
-	<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.8.2.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
 	<script type="text/javascript" src="@Url.Content("~/Scripts/gallery.js")"></script>
 </head>
 	<body>
 		<div class="container topMenu">
 			<div class="row">
 				<div class="sixcol title">
-					@Html.ActionLink(homeLink)
+					 @Html.ActionLink(homeLink)
 				</div>
-				<!--div class="sixcol last items">
-					<a href="#">menu</a> |
-					<a href="#">items</a> |
-					<a href="#">here</a>
-				</div-->
+				<div class="sixcol last items">
+					@if ( fabSess.IsAuthenticated ) {
+						@Html.ActionLink(acctLink, @Model.GallerySession.ActiveUser.Name)
+					}
+					else {
+						<a href="#" onclick="@fabSess.GetGrantWindowOpenScript()">login</a>
+					}
+				</div>
 			</div>
 		</div>
 		@RenderBody()

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Fabric.AppBase.CSharp.Standard.Web.Logic;
 using Fabric.Clients.CSharp.Fluent;
 using Gallery.Domain;
@@ -12,13 +13,6 @@ namespace Gallery.Web.Logic {
 
 	/*================================================================================================*/
 	public class HomeLogic : LogicBase {
-
-
-		////////////////////////////////////////////////////////////////////////////////////////////////
-		/*--------------------------------------------------------------------------------------------*/
-		public FabVersion GetFabricVersion() {
-			return Fabric.Core.Version.Get();
-		}
 
 
 		////////////////////////////////////////////////////////////////////////////////////////////////
@@ -38,8 +32,6 @@ namespace Gallery.Web.Logic {
 			return albums;
 		}
 
-
-		////////////////////////////////////////////////////////////////////////////////////////////////
 		/*--------------------------------------------------------------------------------------------*/
 		internal static IQueryOver<Album, Album> GetAlbumQuery(ISession pSession) {
 			Album albAlias = null;
@@ -47,7 +39,7 @@ namespace Gallery.Web.Logic {
 			WebAlbum dto = null;
 
 			return pSession.QueryOver<Album>(() => albAlias)
-				.JoinAlias(a => a.Photos, () => phoAlias, JoinType.InnerJoin)
+				.JoinAlias(a => a.Photos, () => phoAlias, JoinType.LeftOuterJoin)
 				.SelectList(list => list
 					.SelectGroup(a => a.Id).WithAlias(() => dto.AlbumId)
 					.SelectMin(a => a.Title).WithAlias(() => dto.Title)
@@ -62,6 +54,19 @@ namespace Gallery.Web.Logic {
 					).WithAlias(() => dto.NumFavs)
 				)
 				.TransformUsing(Transformers.AliasToBean<WebAlbum>());
+		}
+
+
+		////////////////////////////////////////////////////////////////////////////////////////////////
+		/*--------------------------------------------------------------------------------------------*/
+		public FabUser GetFabMe() {
+			return Fabric.Core.Me.Get();
+		}
+
+		/*--------------------------------------------------------------------------------------------*/
+		public FabMemberCore GetFabMember(FabUserKey pUserKey) {
+			IList<FabMemberCore> members = Fabric.Core.Myapp.Members.Get();
+			return members.FirstOrDefault(m => m.UserKey.Id == pUserKey.Id);
 		}
 
 	}

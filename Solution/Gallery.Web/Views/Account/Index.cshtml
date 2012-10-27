@@ -1,0 +1,31 @@
+﻿@using Fabric.Clients.CSharp.Fluent
+@model AccountIndexModel
+@{
+	FabUser me = Model.GallerySession.ActiveUser;
+}
+<div class="container">
+	<div class="row">
+		<div class="twelvecol">
+			<h3>@me.Name</h3>
+			<p>
+				ID: @me.Key.Id<br/>
+				Created: @me.Created<br/>
+				Profile:
+				<a href="http://www.inthefabric.com/profiles/users/@me.Name" target="_blank">
+					Visit Fabric profile
+				</a><br/>
+				<br/>
+			</p>
+		</div>
+	</div>
+	@if ( Model.GallerySession.IsAdminUser ) {
+		<div class="row">
+			<div class="twelvecol">
+				<h3>Admin Section</h3>
+				<p>
+					@Html.ActionLink(Model.AddAlbumLink)
+				</p>
+			</div>
+		</div>
+	}
+</div>

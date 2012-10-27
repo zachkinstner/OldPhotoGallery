@@ -1,0 +1,15 @@
+﻿@model AccountAddAlbumModel
+<div class="container">
+	<div class="row">
+		<div class="twelvecol">
+			<p>
+				@Html.ActionLink(
+					new ActionLinkModel<PhotosController>(
+						x => x.Albums(Model.SuccessAlbumId),
+						"Album "+Model.SuccessAlbumId
+					)
+				) was added successfully.
+			</p>
+		</div>
+	</div>
+</div>

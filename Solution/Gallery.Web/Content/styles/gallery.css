@@ -152,6 +152,70 @@ a.tagBox span.count {
 	color: #707880;
 }
 
+/* --- */
+
+div.form {
+	padding: 0 10px 10px 10px;
+	border: 1px solid #202830;
+}
+
+div.form .label {
+	padding: 10px 0 3px 1px;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #808890;
+}
+
+div.form .field {
+	font-size: 1.1em;
+}
+
+div.form input, select, textarea {
+	font-family: Tahoma, Verdana, Arial, Helvetica, Sans-Serif;
+	padding: 4px;
+	width: 260px;
+	font-size: 1.1em;
+}
+
+div.form select {
+	width: inherit;
+}
+
+div.form input.submit {
+	font-size: 1.1em;
+	margin-top: 10px;
+	padding: 2px 6px 2px 6px;
+	width: inherit;
+}
+
+div.form input.input-validation-error, input.input-validation-error {
+	border: 1px solid #e55;
+	padding: 4px;
+}
+
+div.form div.validation-summary-errors {
+	margin-top: 10px;
+	font-size: 1.1em;
+	font-weight: bold;
+	border: 1px solid #e55;
+	padding: 8px;
+	color: #e55;
+}
+
+div.form div.validation-summary-errors ul {
+	font-size: 1.0em;
+	font-weight: normal;
+	margin-left: 20px;
+	list-style-type: square;
+}
+
+div.form span.field-validation-valid {
+}
+
+div.form span.field-validation-error {
+	color: #e55;
+}
+
 
 /*==== MOBILE ========================================================================================*/
 

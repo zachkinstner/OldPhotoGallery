@@ -73,7 +73,7 @@ namespace Gallery.Web {
 				2,
 				"0123456789abcdefghijkLMNOPqrstuv",
 				4,
-				domain+"/gallery/Home/OAuthRedirect",
+				domain+"/gallery/Home/FabricOauthRedirect",
 				FabricSessionContainerProvider
 			);
 
