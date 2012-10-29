@@ -1,0 +1,30 @@
+﻿@model AccountUploadModel
+@{
+	var formObj = new { enctype = "multipart/form-data" };
+}
+<div class="container">
+	<div class="row">
+		<div class="twelvecol">
+			@using ( Html.BeginForm("Upload", "Account", FormMethod.Post, formObj) ) {
+				@Html.ValidationSummary(true, "Photo upload did not occur.")
+				<div class="form">
+					<div class="label">
+						<b>@Html.LabelFor(m => m.AlbumId)</b>
+						@Html.ValidationMessageFor(m => m.AlbumId)
+					</div>
+					<div class="field">
+						@Html.TextBoxFor(m => m.AlbumId)
+					</div>
+					<div class="label">
+						<b>@Html.LabelFor(m => m.Files)</b>
+						@Html.ValidationMessageFor(m => m.Files)
+					</div>
+					<div class="field">
+						@Html.TextBoxFor(m => m.Files, new { type="file", multiple="true" })
+					</div>
+					<input type="submit" class="submit" value="Send" />
+				</div>
+			}
+		</div>
+	</div>
+</div>

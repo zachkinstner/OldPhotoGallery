@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Fabric.AppBase.CSharp.Standard.Infrastructure.Logging;
 using Fabric.AppBase.CSharp.Standard.Web.Application;
 using Gallery.Web.Logic;
 using Gallery.Web.Models.Account;
@@ -68,6 +69,33 @@ namespace Gallery.Web.Controllers {
 
 			ModelState.AddModelError("", "A new album was not created.");
 			return View(pModel);
+		}
+
+
+		////////////////////////////////////////////////////////////////////////////////////////////////
+		/*--------------------------------------------------------------------------------------------*/
+		public ActionResult Upload() {
+			if ( NotAuth() ) { return NotAuthRedir(); }
+
+			var m = NewModel<AccountUploadModel>();
+			return View(m);
+		}
+
+		/*--------------------------------------------------------------------------------------------*/
+		[HttpPost]
+		public ActionResult Upload(AccountUploadModel pModel) {
+			if ( NotAuth() ) { return NotAuthRedir(); }
+			pModel.WebSession = GallerySession;
+
+			if ( !ModelState.IsValid ) {
+				return View(pModel);
+			}
+
+			Log.Debug("UPLOAD: "+pModel.AlbumId+" / "+pModel.Files);
+
+			string albumDir = Server.MapPath("~/uploads/albums")+"/"+pModel.AlbumId+"/";
+			vAcct.SaveFiles(pModel.AlbumId, albumDir, pModel.Files.GetEnumerator());
+			return View("Upload_Status", pModel);
 		}
 
 	}
