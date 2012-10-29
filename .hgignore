@@ -8,3 +8,4 @@ VisualizeHg.bat
 Solution/Gallery.Web/NHibernate.config
 _Publish/*
 Gallery.*.log*
+Solution/Gallery.Web/Gallery.*.Publish.xml
