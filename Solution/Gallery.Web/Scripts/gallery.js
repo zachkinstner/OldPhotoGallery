@@ -25,13 +25,21 @@ function setupThumbs() {
 	var thumbs = $("img.thumb").toArray();
 	
 	for ( var i = 0 ; i < thumbs.length ; ++i ) {
-		$(thumbs[i]).load(
-			function() { 
-				captureImageSize(this);
-				resizeThumb(this);
-			}
-		);
+		var t = thumbs[i];
+		
+		if ( isImageLoaded(t) ) {
+			onThumbLoad(t);
+		}
+		else {
+			$(t).load(function() { onThumbLoad(this); });
+		}
 	}
+}
+
+/*--------------------------------------------------------------------------------------------*/
+function onThumbLoad(pThumb) {
+	captureImageSize(pThumb);
+	resizeThumb(pThumb);
 }
 
 /*--------------------------------------------------------------------------------------------*/
@@ -41,6 +49,13 @@ function cropThumbs() {
 	for ( var i = 0 ; i < thumbs.length ; ++i ) {
 		resizeThumb(thumbs[i]);
 	}
+}
+
+/*--------------------------------------------------------------------------------------------*/
+function isImageLoaded(pImage) {
+	var img = $(pImage).get(0);
+	console.log(img.complete+" - "+img.readyState);
+	return (img.complete || img.readyState);
 }
 
 /*--------------------------------------------------------------------------------------------*/
@@ -89,11 +104,19 @@ function resizeThumb(pThumb) {
 function setupMainPhoto() {
 	var main = $("#mainPhoto");
 	$(main).css("display", "none");
+	
+	if ( isImageLoaded(main) ) {
+		onMainLoad(main);
+	}
+	else {
+		$(main).load(function() { onMainLoad(this); });
+	}
+}
 
-	$(main).load(function() {
-		captureImageSize(this);
-		resizeMainPhoto();
-	});
+/*--------------------------------------------------------------------------------------------*/
+function onMainLoad(pMain) {
+	captureImageSize(pMain);
+	resizeMainPhoto();
 }
 
 /*--------------------------------------------------------------------------------------------*/
