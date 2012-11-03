@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountLogic.cs" />
+    <Compile Include="AccountUploadLogic.cs" />
+    <Compile Include="Dto\WebUploadResult.cs" />
+    <Compile Include="Dto\WebAlbumCore.cs" />
     <Compile Include="Dto\WebPhotoCore.cs" />
     <Compile Include="PhotoLogic.cs" />
     <Compile Include="PhotosLogic.cs" />

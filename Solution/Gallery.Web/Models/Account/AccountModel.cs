@@ -25,6 +25,13 @@ namespace Gallery.Web.Models.Account {
 				return new ActionLinkModel<AccountController>(x => x.AddAlbum(), "Add Album");
 			}
 		}
+
+		/*--------------------------------------------------------------------------------------------*/
+		public ActionLinkModel<AccountController> UploadLink {
+			get {
+				return new ActionLinkModel<AccountController>(x => x.Upload(), "Upload");
+			}
+		}
 		
 	}
 

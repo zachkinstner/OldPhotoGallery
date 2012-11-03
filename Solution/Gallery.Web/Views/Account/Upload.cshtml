@@ -9,18 +9,18 @@
 				@Html.ValidationSummary(true, "Photo upload did not occur.")
 				<div class="form">
 					<div class="label">
-						<b>@Html.LabelFor(m => m.AlbumId)</b>
-						@Html.ValidationMessageFor(m => m.AlbumId)
+						<b>@Html.LabelFor(m => m.SelectedAlbumId)</b>
 					</div>
 					<div class="field">
-						@Html.TextBoxFor(m => m.AlbumId)
+						@Html.DropDownListFor(x => x.SelectedAlbumId, Model.AlbumItems, "")
+						@Html.ValidationMessageFor(x => x.SelectedAlbumId)
 					</div>
 					<div class="label">
 						<b>@Html.LabelFor(m => m.Files)</b>
-						@Html.ValidationMessageFor(m => m.Files)
 					</div>
 					<div class="field">
-						@Html.TextBoxFor(m => m.Files, new { type="file", multiple="true" })
+						@Html.TextBoxFor(m => m.Files, new { type="file", multiple="true" })<br/>
+						@Html.ValidationMessageFor(m => m.Files)
 					</div>
 					<input type="submit" class="submit" value="Send" />
 				</div>

@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using Gallery.Domain;
 
 namespace Gallery.Web.Logic.Dto {
 
 	/*================================================================================================*/
-	public class WebAlbum {
+	public class WebAlbum : WebAlbumCore {
 
-		public int AlbumId { get; internal set; }
 		public int Index { get; internal set; }
-		public string Title { get; internal set; }
 		public int NumPhotos { get; internal set; }
 		public int NumFavs { get; internal set; }
 		public int FirstPhotoId { get; internal set; }
 		public DateTime StartDate { get; internal set; }
 		public DateTime EndDate { get; internal set; }
 		public IList<WebAlbumTag> Tags { get; internal set; }
+		
+		
+		////////////////////////////////////////////////////////////////////////////////////////////////
+		/*--------------------------------------------------------------------------------------------*/
+		public WebAlbum() {}
+		public WebAlbum(Album pAlbum) : base(pAlbum) {}
 
 
 		////////////////////////////////////////////////////////////////////////////////////////////////

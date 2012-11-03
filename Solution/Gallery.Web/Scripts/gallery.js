@@ -17,6 +17,24 @@ $(window).resize(function() {
 	resizeMainPhoto();
 });
 
+/*--------------------------------------------------------------------------------------------*/
+//stackoverflow.com/questions/8348017/
+//	how-to-tell-when-an-image-is-already-in-browser-cache-in-ie9
+function addLoadCallback(pObj, pCallback) {
+	if ( $.browser.msie ) {
+		var src = $(pObj).attr("src");
+		$(pObj).attr("src", "");
+		$(pObj).attr("src", src);
+	}
+
+	$(pObj).one("load", pCallback).each(function() {
+		if ( this.complete || this.readyState == "complete" || this.readyState == 4 ||
+				($.browser.msie && parseInt($.browser.version) == 6)) {
+			$(this).trigger("load");
+		}
+	});
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /*--------------------------------------------------------------------------------------------*/
@@ -25,14 +43,7 @@ function setupThumbs() {
 	var thumbs = $("img.thumb").toArray();
 	
 	for ( var i = 0 ; i < thumbs.length ; ++i ) {
-		var t = thumbs[i];
-		
-		if ( isImageLoaded(t) ) {
-			onThumbLoad(t);
-		}
-		else {
-			$(t).load(function() { onThumbLoad(this); });
-		}
+		addLoadCallback(thumbs[i], function() { onThumbLoad(this); });
 	}
 }
 
@@ -52,15 +63,8 @@ function cropThumbs() {
 }
 
 /*--------------------------------------------------------------------------------------------*/
-function isImageLoaded(pImage) {
-	var img = $(pImage).get(0);
-	console.log(img.complete+" - "+img.readyState);
-	return (img.complete || img.readyState);
-}
-
-/*--------------------------------------------------------------------------------------------*/
 function captureImageSize(pThumb) {
-	$(pThumb).css("display", "inherit");
+	$(pThumb).css("display", "block");
 	$(pThumb).css("position", "absolute");
 	$(pThumb).data("origW", $(pThumb).width());
 	$(pThumb).data("origH", $(pThumb).height());
@@ -68,7 +72,7 @@ function captureImageSize(pThumb) {
 	
 	var imgW = $(pThumb).data("origW");
 	var imgH = $(pThumb).data("origH");
-	//console.log(imgW+"/"+imgH+" ... "+$(pThumb).width()+"/"+$(pThumb).height());
+	console.log(imgW+"/"+imgH+" ... "+$(pThumb).width()+"/"+$(pThumb).height());
 }
 
 /*--------------------------------------------------------------------------------------------*/
@@ -104,13 +108,7 @@ function resizeThumb(pThumb) {
 function setupMainPhoto() {
 	var main = $("#mainPhoto");
 	$(main).css("display", "none");
-	
-	if ( isImageLoaded(main) ) {
-		onMainLoad(main);
-	}
-	else {
-		$(main).load(function() { onMainLoad(this); });
-	}
+	addLoadCallback(main, function() { onMainLoad(this); });
 }
 
 /*--------------------------------------------------------------------------------------------*/

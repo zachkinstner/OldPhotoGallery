@@ -78,6 +78,7 @@ namespace Gallery.Web.Controllers {
 			if ( NotAuth() ) { return NotAuthRedir(); }
 
 			var m = NewModel<AccountUploadModel>();
+			m.AlbumList = vAcct.GetAlbumCores();
 			return View(m);
 		}
 
@@ -87,14 +88,16 @@ namespace Gallery.Web.Controllers {
 			if ( NotAuth() ) { return NotAuthRedir(); }
 			pModel.WebSession = GallerySession;
 
-			if ( !ModelState.IsValid ) {
+			if ( !ModelState.IsValid || pModel.SelectedAlbumId == null ) {
+				pModel.AlbumList = vAcct.GetAlbumCores();
 				return View(pModel);
 			}
 
-			Log.Debug("UPLOAD: "+pModel.AlbumId+" / "+pModel.Files);
-
-			string albumDir = Server.MapPath("~/uploads/albums")+"/"+pModel.AlbumId+"/";
-			vAcct.SaveFiles(pModel.AlbumId, albumDir, pModel.Files.GetEnumerator());
+			string albumDir = Server.MapPath("~/uploads/albums")+"/"+pModel.SelectedAlbumId+"/";
+			Log.Debug("UPLOAD: "+pModel.SelectedAlbumId+" / "+pModel.Files);
+			Log.Debug("UPLOAD TO: "+albumDir);
+			pModel.UploadResults = 
+				vAcct.SaveFiles((int)pModel.SelectedAlbumId, albumDir, pModel.Files.GetEnumerator());
 			return View("Upload_Status", pModel);
 		}
 
